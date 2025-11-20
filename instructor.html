@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>강사 소개 | 이주강</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #fdf8ef;
+        --bg-soft: #f7efe2;
+        --bg-card: rgba(255, 255, 255, 0.9);
+        --text: #1c1f2a;
+        --muted: #666b77;
+        --accent: #f4c06b;
+        --accent-strong: #f08055;
+        --border: rgba(28, 31, 42, 0.1);
+        --shadow: 0 25px 60px rgba(210, 190, 150, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Pretendard", "Noto Sans KR", -apple-system,
+          BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, var(--bg), #f8ead1 65%);
+        color: var(--text);
+        min-height: 100vh;
+        word-break: keep-all;
+      }
+
+      .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3.5rem) 4rem;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+
+      header h1 {
+        margin: 0 0 1.5rem;
+        font-size: clamp(2.6rem, 5vw, 4rem);
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+
+      header h1 span {
+        display: inline-block;
+        background: linear-gradient(120deg, var(--accent-strong), #f6a97c);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      header p {
+        margin: 0;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 2rem;
+        padding: 0.85rem 1.6rem;
+        border-radius: 999px;
+        background: rgba(240, 128, 85, 0.12);
+        color: var(--accent-strong);
+        border: 1px solid rgba(240, 128, 85, 0.35);
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.2s ease, background 0.2s ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-2px);
+        background: rgba(240, 128, 85, 0.2);
+      }
+
+      .hero-media {
+        justify-self: center;
+      }
+
+      .portrait-frame {
+        width: min(320px, 80vw);
+        aspect-ratio: 3 / 4;
+        border-radius: 28px;
+        padding: 10px;
+        background: linear-gradient(160deg, #fefefe, #ffe3b8);
+        box-shadow: var(--shadow);
+      }
+
+      .portrait-frame img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 22px;
+        display: block;
+      }
+
+      .panel {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+      }
+
+      h2 {
+        margin: 0 0 1.5rem;
+        font-size: 1.35rem;
+        letter-spacing: 0.04em;
+        color: #2c2f3d;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .info-chip {
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 1rem 1.25rem;
+        background: var(--bg-soft);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+
+      .info-chip label {
+        display: block;
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        color: #8f8b80;
+        text-transform: uppercase;
+        margin-bottom: 0.35rem;
+      }
+
+      .info-chip span {
+        font-size: 1.12rem;
+        font-weight: 600;
+      }
+
+      .expertise {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+        line-height: 1.75;
+        color: var(--muted);
+      }
+
+      .filter {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+      }
+
+      .filter button {
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.55rem 1.3rem;
+        background: #fff;
+        color: var(--muted);
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.2s ease, color 0.2s ease, border 0.2s ease;
+      }
+
+      .filter button.active,
+      .filter button:hover {
+        background: rgba(244, 192, 107, 0.2);
+        border-color: rgba(244, 192, 107, 0.6);
+        color: #2c2f3d;
+      }
+
+      .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .timeline-item {
+        border-left: 2px solid rgba(244, 192, 107, 0.6);
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        top: 7px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--accent-strong);
+        box-shadow: 0 0 12px rgba(240, 128, 85, 0.7);
+      }
+
+      .timeline-year {
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .timeline-desc {
+        margin: 0.4rem 0 0;
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+
+      .timeline-item[data-tags*="project"] .timeline-desc strong {
+        color: #d97706;
+      }
+
+      footer {
+        margin-top: 3rem;
+        border-top: 1px solid var(--border);
+        padding-top: 1.5rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 640px) {
+        header {
+          text-align: center;
+        }
+
+        .hero-media {
+          order: -1;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-item {
+          padding-left: 1rem;
+        }
+
+        .timeline-item::before {
+          left: -8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div>
+          <h1>
+            정보·컴퓨터 강사<br />
+            <span>이주강</span>
+          </h1>
+          <p>
+            인공지능 교육과정 집필과 전국 단위 프로젝트 운영 경험을 바탕으로
+            설화고등학교에서 첨단 융합교육을 이끌고 있습니다. 교육 현장과
+            정책·연구를 모두 경험한 실천형 전문가로, 학생과 교사 모두에게
+            확장성 있는 AI 학습 경험을 설계합니다.
+          </p>
+          <a class="cta" href="#timeline">주요 경력 살펴보기 →</a>
+        </div>
+        <div class="hero-media">
+          <div class="portrait-frame">
+            <img
+              src="지브리사진.png"
+              alt="정보·컴퓨터 강사 이주강의 프로필 일러스트"
+            />
+          </div>
+        </div>
+      </header>
+
+      <section class="panel" id="profile">
+        <h2>Profile</h2>
+        <div class="info-grid">
+          <article class="info-chip">
+            <label>이름</label>
+            <span>이주강</span>
+          </article>
+          <article class="info-chip">
+            <label>교과</label>
+            <span>정보·컴퓨터</span>
+          </article>
+          <article class="info-chip">
+            <label>소속</label>
+            <span>설화고등학교</span>
+          </article>
+          <article class="info-chip">
+            <label>주소</label>
+            <span>충남 아산시 배방읍 용연로 111</span>
+          </article>
+          <article class="info-chip">
+            <label>전화번호</label>
+            <span>010-6795-0233</span>
+          </article>
+          <article class="info-chip">
+            <label>메일</label>
+            <span>wnrkd1@naver.com</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="expertise">
+        <h2>Expertise Highlights</h2>
+        <div class="expertise">
+          <p>
+            2022 개정 교육과정 인공지능 기초 교과 집필진으로 활동하며 국가
+            차원의 AI 교육 체계를 설계했습니다. 현장의 요구를 반영한 실습형
+            모듈과 단계별 평가 체계를 구축해 다양한 학교에서 활용 중입니다.
+          </p>
+          <p>
+            교육부 지정 34개 인공지능 융합교육중점고등학교 운영 경험을 통해
+            대규모 프로젝트 기획, 교사 연수, 산업 연계 수업 체계를 구축했습니다.
+            데이터 기반 프로젝트 수업과 학생 주도형 연구 수업을 지원합니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel" id="timeline">
+        <h2>Experience Timeline</h2>
+        <div class="filter">
+          <button type="button" data-key="all" class="active">전체</button>
+          <button type="button" data-key="curriculum">교육과정</button>
+          <button type="button" data-key="training">직무연수</button>
+          <button type="button" data-key="project">학교사업</button>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item" data-tags="curriculum">
+            <div class="timeline-year">2022</div>
+            <p class="timeline-desc">
+              2022 개정 교육과정 <strong>인공지능 기초 교과 집필</strong>
+            </p>
+          </article>
+          <article class="timeline-item" data-tags="project">
+            <div class="timeline-year">2020</div>
+            <p class="timeline-desc">
+              인공지능 융합교육중점고등학교 운영 (교육부, 34개교)
+            </p>
+          </article>
+          <article class="timeline-item" data-tags="project">
+            <div class="timeline-year">2018 ~ 현재</div>
+            <p class="timeline-desc">
+              소프트웨어 및 인공지능 관련 학교사업 운영
+            </p>
+          </article>
+          <article class="timeline-item" data-tags="training">
+            <div class="timeline-year">2020 ~ 현재</div>
+            <p class="timeline-desc">인공지능 관련 직무연수 강사</p>
+          </article>
+          <article class="timeline-item" data-tags="training curriculum">
+            <div class="timeline-year">2021 ~ 현재</div>
+            <p class="timeline-desc">인공지능 융합교육과정 직무연수 강사</p>
+          </article>
+        </div>
+      </section>
+
+      <footer>© 2025 Lee, Joo-gang. All rights reserved.</footer>
+    </div>
+    <script>
+      const buttons = document.querySelectorAll("#filter button");
+      const items = document.querySelectorAll(".timeline-item");
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          buttons.forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+          const key = button.dataset.key;
+
+          items.forEach((item) => {
+            const tags = item.dataset.tags.split(" ");
+            if (key === "all" || tags.includes(key)) {
+              item.style.display = "block";
+              item.style.opacity = 1;
+            } else {
+              item.style.display = "none";
+              item.style.opacity = 0;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
