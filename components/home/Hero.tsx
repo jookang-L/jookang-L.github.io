@@ -130,7 +130,7 @@ export default function Hero() {
         {/* 칠판 버전 */}
         <motion.div style={{ opacity: chalkOp }}>
           <p
-            className="chalk-font text-white/60 text-sm md:text-base mb-3"
+            className="chalk-font text-white/60 text-base md:text-lg mb-3"
             style={{ letterSpacing: '0.25em' }}
           >✏️ 교사를 위한 디지털 도구</p>
           <h1
@@ -146,17 +146,17 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => void openGibo()}
-              className="px-7 py-3.5 rounded-full font-bold text-sm bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
             >📚 생기부 도우미 (웹)</button>
             <button
               type="button"
               onClick={() => openExternal(LINK_POKEPANDAS)}
-              className="px-7 py-3.5 rounded-full font-bold text-sm bg-pikachu/90 text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_28px_rgba(255,222,0,0.45)] transition-all"
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-pikachu/90 text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_28px_rgba(255,222,0,0.45)] transition-all"
             >🐼 PokéPandas</button>
             <button
               type="button"
               onClick={() => smoothScroll('#infernape-section')}
-              className="px-7 py-3.5 rounded-full font-bold text-sm text-white hover:scale-105 transition-all"
+              className="px-7 py-3.5 rounded-full font-bold text-base text-white hover:scale-105 transition-all"
               style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)' }}
             >🔥 대시보드 다운로드</button>
           </div>
@@ -197,17 +197,17 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => void openGibo()}
-              className="px-7 py-3.5 rounded-full font-bold text-sm bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
             >📚 생기부 도우미 (웹)</button>
             <button
               type="button"
               onClick={() => openExternal(LINK_POKEPANDAS)}
-              className="px-7 py-3.5 rounded-full font-bold text-sm bg-pikachu/90 text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_28px_rgba(255,222,0,0.45)] transition-all"
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-pikachu/90 text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_28px_rgba(255,222,0,0.45)] transition-all"
             >🐼 PokéPandas</button>
             <button
               type="button"
               onClick={() => smoothScroll('#infernape-section')}
-              className="px-7 py-3.5 rounded-full font-bold text-sm text-white hover:scale-105 transition-all"
+              className="px-7 py-3.5 rounded-full font-bold text-base text-white hover:scale-105 transition-all"
               style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)' }}
             >🔥 대시보드 다운로드</button>
           </div>
@@ -216,7 +216,7 @@ export default function Hero() {
 
       {/* ── 스크롤 힌트 ── */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-        <span className="text-white/40 text-xs tracking-widest">스크롤을 내려보세요</span>
+        <span className="text-white/40 text-sm tracking-widest">스크롤을 내려보세요</span>
         <div className="animate-bounce-y text-white/40 text-lg">↓</div>
       </div>
     </section>

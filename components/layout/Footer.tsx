@@ -41,8 +41,8 @@ export default function Footer() {
               >⚡</div>
               <span className="chalk-font text-white text-lg">주크(JooK)의 놀이터</span>
             </div>
-            <p className="text-white text-sm">교사를 위한 무료 디지털 도구 모음</p>
-            <p className="text-white text-xs mt-1">Made with ❤️ by 주강(JooK)</p>
+            <p className="text-white text-base">교사를 위한 무료 디지털 도구 모음</p>
+            <p className="text-white text-sm mt-1">Made with ❤️ by 주강(JooK)</p>
           </div>
 
           {/* 메뉴 링크 */}
@@ -71,10 +71,10 @@ export default function Footer() {
           className="mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3"
           style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}
         >
-          <p className="text-white text-xs">© 2026 JooK&apos;s Playground. All rights reserved.</p>
+          <p className="text-white text-sm">© 2026 JooK&apos;s Playground. All rights reserved.</p>
           <div className="flex gap-4">
-            <a href="#" className="text-white hover:text-white/80 text-xs transition-colors">이용약관</a>
-            <a href="#" className="text-white hover:text-white/80 text-xs transition-colors">개인정보처리방침</a>
+            <a href="#" className="text-white hover:text-white/80 text-sm transition-colors">이용약관</a>
+            <a href="#" className="text-white hover:text-white/80 text-sm transition-colors">개인정보처리방침</a>
           </div>
         </div>
       </div>

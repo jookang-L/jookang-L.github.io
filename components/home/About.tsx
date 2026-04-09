@@ -23,7 +23,7 @@ export default function About() {
           {/* 소개 텍스트 */}
           <FadeIn direction="right">
             <div
-              className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold mb-4"
+              className="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold mb-4"
               style={{ background:'rgba(255,222,0,0.12)', color:'var(--pikachu)' }}
             >⚡ ABOUT</div>
             <h2
@@ -32,7 +32,7 @@ export default function About() {
             >
               주크(JooK)의<br />놀이터를 소개합니다
             </h2>
-            <p className="text-gray-300 text-sm leading-relaxed mb-4">
+            <p className="text-gray-300 text-base leading-relaxed mb-4">
               안녕하세요! 저는 현직 교사이자 독학 개발자{' '}
               <strong style={{ color:'var(--pikachu)' }}>주강(JooK)</strong>입니다.<br />
               매일 반복되는 생활기록부 작성과 업무 관리에 지쳐, 직접 만들기 시작했습니다.
@@ -47,7 +47,7 @@ export default function About() {
               {BADGES.map((b) => (
                 <span
                   key={b.text}
-                  className="text-xs font-bold px-3 py-1.5 rounded-full"
+                  className="text-sm font-bold px-3 py-1.5 rounded-full"
                   style={b.style}
                 >{b.text}</span>
               ))}
@@ -64,12 +64,12 @@ export default function About() {
                 >👨‍💻</div>
                 <div>
                   <div className="text-white font-bold text-lg">주강 (JooK)</div>
-                  <div className="text-gray-400 text-sm">현직 교사 · 독학 개발자</div>
+                  <div className="text-gray-400 text-base">현직 교사 · 독학 개발자</div>
                 </div>
               </div>
               <div className="space-y-3">
                 {PROFILE_ITEMS.map((item) => (
-                  <div key={item.text} className="flex items-center gap-3 text-sm">
+                  <div key={item.text} className="flex items-center gap-3 text-base">
                     <span style={{ color:'var(--pikachu)' }}>{item.icon}</span>
                     <span className="text-gray-300">{item.text}</span>
                   </div>

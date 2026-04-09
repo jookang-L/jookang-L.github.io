@@ -64,7 +64,7 @@ export default function Contact() {
 
         <FadeIn className="text-center mb-16">
           <h2 className="chalk-font text-white" style={{ fontSize:'clamp(26px,5vw,48px)' }}>함께 만들어가요</h2>
-          <p className="text-gray-500 mt-2 text-sm">질문, 버그 제보, 개선 제안 무엇이든 환영합니다</p>
+          <p className="text-gray-500 mt-2 text-base">질문, 버그 제보, 개선 제안 무엇이든 환영합니다</p>
         </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -79,13 +79,13 @@ export default function Contact() {
                   { label:'이메일', type:'email', placeholder:'email@example.com' },
                 ].map((f) => (
                   <div key={f.label}>
-                    <label className="block text-xs text-gray-400 mb-1.5">{f.label}</label>
+                    <label className="block text-sm text-gray-400 mb-1.5">{f.label}</label>
                     <input
                       name={f.label === '이름' ? 'name' : 'email'}
                       type={f.type}
                       placeholder={f.placeholder}
                       required
-                      className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none transition-colors"
+                      className="w-full px-4 py-3 rounded-xl text-white text-base outline-none transition-colors"
                       style={{ background:'rgba(255,255,255,0.05)', border:'1px solid rgba(255,255,255,0.1)' }}
                       onFocus={(e) => (e.target.style.borderColor = 'rgba(255,222,0,0.5)')}
                       onBlur={(e)  => (e.target.style.borderColor = 'rgba(255,255,255,0.1)')}
@@ -95,10 +95,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-xs text-gray-400 mb-1.5">질문 유형</label>
+                <label className="block text-sm text-gray-400 mb-1.5">질문 유형</label>
                 <select
                   name="category"
-                  className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none"
+                  className="w-full px-4 py-3 rounded-xl text-white text-base outline-none"
                   style={{ background:'#0f0f1e', border:'1px solid rgba(255,255,255,0.1)' }}
                   defaultValue="생기부 도우미"
                 >
@@ -109,13 +109,13 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="block text-xs text-gray-400 mb-1.5">내용</label>
+                <label className="block text-sm text-gray-400 mb-1.5">내용</label>
                 <textarea
                   name="message"
                   rows={5}
                   required
                   placeholder="질문 내용을 자세히 적어주세요 :)"
-                  className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none resize-none"
+                  className="w-full px-4 py-3 rounded-xl text-white text-base outline-none resize-none"
                   style={{ background:'rgba(255,255,255,0.05)', border:'1px solid rgba(255,255,255,0.1)' }}
                   onFocus={(e) => (e.target.style.borderColor = 'rgba(255,222,0,0.5)')}
                   onBlur={(e)  => (e.target.style.borderColor = 'rgba(255,255,255,0.1)')}
@@ -125,7 +125,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={submitting || status === 'sent'}
-                className="w-full py-3.5 rounded-full font-bold text-sm transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                className="w-full py-3.5 rounded-full font-bold text-base transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                 style={
                   status === 'sent'
                     ? { background: '#22c55e', color: 'white' }
@@ -139,7 +139,7 @@ export default function Contact() {
                     : '⚡ 질문 보내기'}
               </button>
               {error && (
-                <p className="text-red-400/90 text-xs text-center leading-relaxed" role="alert">
+                <p className="text-red-400/90 text-sm text-center leading-relaxed" role="alert">
                   {error}
                 </p>
               )}
@@ -162,14 +162,14 @@ export default function Contact() {
                   }}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-white text-sm font-medium pr-4">{item.q}</span>
+                    <span className="text-white text-base font-medium pr-4">{item.q}</span>
                     <span
                       className="text-gray-400 text-xl font-light flex-shrink-0 transition-transform duration-300"
                       style={{ transform: openIdx === i ? 'rotate(45deg)' : 'rotate(0deg)' }}
                     >+</span>
                   </div>
                   {openIdx === i && (
-                    <p className="mt-3 text-gray-400 text-sm leading-relaxed">{item.a}</p>
+                    <p className="mt-3 text-gray-400 text-base leading-relaxed">{item.a}</p>
                   )}
                 </div>
               ))}

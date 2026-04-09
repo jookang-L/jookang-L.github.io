@@ -29,10 +29,10 @@ export default function GreninjaSection() {
         <FadeIn className="text-center mb-16">
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full" style={{ background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.15)' }}>
             <span>💧</span>
-            <span className="text-white text-xs font-medium" style={{ letterSpacing:'0.06em' }}>개굴닌자와 함께하는</span>
+            <span className="text-white text-sm font-medium" style={{ letterSpacing:'0.06em' }}>개굴닌자와 함께하는</span>
           </div>
           <h2 className="chalk-font text-white mb-4" style={{ fontSize:'clamp(30px,6vw,60px)' }}>생기부 도우미 with JooK</h2>
-          <p className="text-blue-200 text-base md:text-lg max-w-xl mx-auto">번거로운 생활기록부 작성, 스마트하게 해결하세요</p>
+          <p className="text-blue-200 text-lg md:text-xl max-w-xl mx-auto">번거로운 생활기록부 작성, 스마트하게 해결하세요</p>
         </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
@@ -61,7 +61,7 @@ export default function GreninjaSection() {
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0" style={{ background:'rgba(100,180,255,0.15)' }}>{f.icon}</div>
                     <div>
                       <h3 className="text-white font-bold text-base mb-1">{f.title}</h3>
-                      <p className="text-blue-200 text-sm leading-relaxed">{f.desc}</p>
+                      <p className="text-blue-200 text-base leading-relaxed">{f.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -72,15 +72,15 @@ export default function GreninjaSection() {
               <button
                 type="button"
                 onClick={() => void openGibo()}
-                className="flex-1 py-3.5 rounded-full font-bold text-sm bg-white text-greninja hover:scale-105 hover:shadow-xl transition-all text-center"
+                className="flex-1 py-3.5 rounded-full font-bold text-base bg-white text-greninja hover:scale-105 hover:shadow-xl transition-all text-center"
               >🌐 웹사이트에서 사용하기</button>
               <a
                 href="#faq-section"
-                className="flex-1 py-3.5 rounded-full font-bold text-sm text-white text-center hover:scale-105 transition-all"
+                className="flex-1 py-3.5 rounded-full font-bold text-base text-white text-center hover:scale-105 transition-all"
                 style={{ background:'rgba(255,255,255,0.1)', border:'1px solid rgba(255,255,255,0.25)' }}
               >❓ FAQ 보기</a>
             </FadeIn>
-            <p className="text-blue-300 text-xs text-center">v1.0.0</p>
+            <p className="text-blue-300 text-sm text-center">v1.0.0</p>
           </div>
         </div>
       </div>

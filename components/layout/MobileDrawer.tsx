@@ -83,13 +83,13 @@ export default function MobileDrawer({ open, onClose }: Props) {
             <div className="px-4 space-y-1">
               {DRAWER_LINKS.map((section) => (
                 <div key={section.label}>
-                  <div className="text-xs text-gray-500 px-2 mt-4 mb-1.5 font-bold tracking-widest">
+                  <div className="text-sm text-gray-500 px-2 mt-4 mb-1.5 font-bold tracking-widest">
                     {section.label}
                   </div>
                   {section.links.map((link) => (
                     <button
                       key={link.text}
-                      className="w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-300 hover:text-white hover:bg-white/8 transition-colors text-sm"
+                      className="w-full text-left flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-300 hover:text-white hover:bg-white/8 transition-colors text-base"
                       onClick={() => handleDrawerLink(link.href)}
                     >
                       {link.text}

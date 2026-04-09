@@ -44,10 +44,10 @@ export default function InfernapeSection() {
           <FadeIn className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full" style={{ background:'rgba(255,255,255,0.12)', border:'1px solid rgba(255,255,255,0.2)' }}>
               <span className="animate-flame">🔥</span>
-              <span className="text-white text-xs font-medium" style={{ letterSpacing:'0.06em' }}>초염몽의 열정으로 만든</span>
+              <span className="text-white text-sm font-medium" style={{ letterSpacing:'0.06em' }}>초염몽의 열정으로 만든</span>
             </div>
             <h2 className="chalk-font text-white mb-4" style={{ fontSize:'clamp(30px,6vw,60px)' }}>교사용 올인원 대시보드</h2>
-            <p className="text-orange-100 text-base md:text-lg max-w-xl mx-auto">파일함 · 캘린더 · 급식 정보 — 모든 것이 하나의 화면에</p>
+            <p className="text-orange-100 text-lg md:text-xl max-w-xl mx-auto">파일함 · 캘린더 · 급식 정보 — 모든 것이 하나의 화면에</p>
           </FadeIn>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
@@ -60,8 +60,8 @@ export default function InfernapeSection() {
                   <ZoomIn key={f.label} delay={i * 0.07}>
                     <div className="glass p-4 text-center" style={{ borderColor:'rgba(255,220,0,0.2)' }}>
                       <div className="text-3xl mb-2 animate-flame">{f.icon}</div>
-                      <h3 className="text-white font-bold text-xs">{f.label}</h3>
-                      <p className="text-orange-200 text-xs mt-1 whitespace-pre-line">{f.desc}</p>
+                      <h3 className="text-white font-bold text-sm">{f.label}</h3>
+                      <p className="text-orange-200 text-sm mt-1 whitespace-pre-line">{f.desc}</p>
                     </div>
                   </ZoomIn>
                 ))}
@@ -74,7 +74,7 @@ export default function InfernapeSection() {
                   </h3>
                   <ul className="space-y-3">
                     {FEATURE_LIST.map((f) => (
-                      <li key={f} className="flex items-center gap-3 text-orange-100 text-sm">
+                      <li key={f} className="flex items-center gap-3 text-orange-100 text-base">
                         <span className="text-yellow-300 font-bold">✓</span>{f}
                       </li>
                     ))}
@@ -85,9 +85,9 @@ export default function InfernapeSection() {
               <FadeIn direction="up" delay={0.34}>
                 <button
                   onClick={() => open('올인원 대시보드')}
-                  className="w-full py-3.5 rounded-full font-bold text-sm bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
+                  className="w-full py-3.5 rounded-full font-bold text-base bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
                 >⬇️ 최신 버전 다운로드</button>
-                <p className="text-orange-200 text-xs text-center mt-2">v1.0.0 · Windows / macOS · 무료</p>
+                <p className="text-orange-200 text-sm text-center mt-2">v1.0.0 · Windows / macOS · 무료</p>
               </FadeIn>
             </div>
 

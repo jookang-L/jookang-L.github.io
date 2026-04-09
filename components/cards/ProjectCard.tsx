@@ -127,7 +127,7 @@ export default function ProjectCard({ project, index }: Props) {
         </div>
 
         <h3 className="text-white font-bold text-lg mb-2">{project.name}</h3>
-        <p className="text-gray-400 text-sm leading-relaxed">{project.description}</p>
+        <p className="text-gray-400 text-base leading-relaxed">{project.description}</p>
       </div>
 
       {/* 본문 */}
@@ -150,7 +150,7 @@ export default function ProjectCard({ project, index }: Props) {
           onClick={handleAction}
           disabled={!hasLink}
           className={clsx(
-            'w-full py-3 rounded-full font-bold text-sm transition-all',
+            'w-full py-3 rounded-full font-bold text-base transition-all',
             hasLink ? 'hover:scale-105 hover:shadow-lg' : 'opacity-50 cursor-not-allowed'
           )}
           style={{

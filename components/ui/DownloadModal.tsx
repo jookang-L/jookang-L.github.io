@@ -52,24 +52,24 @@ export default function DownloadModal() {
                 style={{ background: 'rgba(255,222,0,0.1)', border: '1px solid rgba(255,222,0,0.3)' }}
               >📦</div>
               <h3 className="text-white text-xl font-bold mb-1">{currentApp} 다운로드</h3>
-              <p className="text-gray-400 text-sm">운영체제를 선택해주세요</p>
+              <p className="text-gray-400 text-base">운영체제를 선택해주세요</p>
             </div>
 
             {/* 버튼들 */}
             <div className="space-y-3 mb-4">
               <button
                 onClick={() => doDownload('windows')}
-                className="w-full py-3.5 rounded-full font-bold text-sm bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
+                className="w-full py-3.5 rounded-full font-bold text-base bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
               >🪟 Windows 버전 다운로드</button>
               <button
                 onClick={() => doDownload('mac')}
-                className="w-full py-3.5 rounded-full font-bold text-sm text-white hover:scale-105 transition-all"
+                className="w-full py-3.5 rounded-full font-bold text-base text-white hover:scale-105 transition-all"
                 style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)' }}
               >🍎 macOS 버전 다운로드</button>
             </div>
 
             <div
-              className="p-3 rounded-xl text-xs text-gray-500 text-center"
+              className="p-3 rounded-xl text-sm text-gray-500 text-center"
               style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)' }}
             >
               ⚠️ 파일 실행 시 백신 경고가 뜰 수 있습니다.<br/>

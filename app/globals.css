@@ -13,12 +13,17 @@
 
 /* ─── 기본 리셋 ─── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* 1rem 기준 약 18px — Tailwind rem 단위 전반적으로 한 단계 가독성 향상 */
+html {
+  scroll-behavior: smooth;
+  font-size: 112.5%;
+}
 body {
   font-family: var(--font-kyobo), system-ui, sans-serif;
   overflow-x: hidden;
   background: #0a0a14;
   color: white;
+  line-height: 1.65;
 }
 
 /* ─── 스크롤바 ─── */

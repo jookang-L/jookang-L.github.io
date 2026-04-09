@@ -97,7 +97,7 @@ export default function Header() {
             <div className="hidden md:block">
               <span className="chalk-font text-pikachu text-lg">JooK&apos;s Playground</span>
               <span
-                className="ml-2 text-xs font-bold px-2 py-0.5 rounded-full"
+                className="ml-2 text-sm font-bold px-2 py-0.5 rounded-full"
                 style={{ background: 'rgba(255,222,0,0.15)', color: 'var(--pikachu)' }}
               >주크의 놀이터</span>
             </div>
@@ -108,7 +108,7 @@ export default function Header() {
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className="nav-item relative">
                 <button
-                  className="flex items-center gap-1.5 px-3.5 py-2 text-white/85 hover:text-pikachu hover:bg-pikachu/8 text-sm font-medium rounded-lg transition-all"
+                  className="flex items-center gap-1.5 px-3.5 py-2 text-white/85 hover:text-pikachu hover:bg-pikachu/8 text-base font-medium rounded-lg transition-all"
                   style={{ border: 'none', background: 'transparent', cursor: 'pointer' }}
                 >
                   {item.label}
@@ -132,8 +132,8 @@ export default function Header() {
                           style={{ background: 'rgba(255,222,0,0.1)' }}
                         >{link.icon}</div>
                         <div>
-                          <div className="font-bold text-sm mb-0.5">{link.title}</div>
-                          <div className="text-gray-400 text-xs">{link.desc}</div>
+                          <div className="font-bold text-base mb-0.5">{link.title}</div>
+                          <div className="text-gray-400 text-sm">{link.desc}</div>
                         </div>
                       </a>
                     ))}

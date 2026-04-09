@@ -45,7 +45,7 @@ export default function Updates() {
           <h2 className="chalk-font text-white" style={{ fontSize:'clamp(26px,5vw,48px)' }}>
             <span style={{ color:'var(--pikachu)' }}>📢</span> 업데이트 소식
           </h2>
-          <p className="text-gray-500 mt-2 text-sm">주크의 놀이터에서 만들어가는 새로운 이야기들</p>
+          <p className="text-gray-500 mt-2 text-base">주크의 놀이터에서 만들어가는 새로운 이야기들</p>
         </FadeIn>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -56,14 +56,14 @@ export default function Updates() {
                 style={{ background:'#111827', border:`1px solid ${u.borderColor}` }}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-bold px-2.5 py-1 rounded-full" style={u.badgeStyle}>{u.badge}</span>
-                  <span className="text-gray-500 text-xs">{u.date}</span>
+                  <span className="text-xs font-bold px-2.5 py-1 rounded-full sm:text-sm" style={u.badgeStyle}>{u.badge}</span>
+                  <span className="text-gray-500 text-sm">{u.date}</span>
                 </div>
-                <h3 className="text-white font-bold mb-2">{u.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{u.desc}</p>
+                <h3 className="text-white font-bold text-lg mb-2">{u.title}</h3>
+                <p className="text-gray-400 text-base leading-relaxed">{u.desc}</p>
                 <div className="mt-4 flex items-center gap-2">
                   <div className="animate-updot w-2 h-2 rounded-full" style={{ background: u.dotColor }} />
-                  <span className={`${u.dotLabelColor} text-xs`}>{u.dotLabel}</span>
+                  <span className={`${u.dotLabelColor} text-sm`}>{u.dotLabel}</span>
                 </div>
               </div>
             </FadeIn>

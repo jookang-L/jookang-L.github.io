@@ -102,7 +102,7 @@ export function GiboLinkProvider({ children }: { children: ReactNode }) {
             <h2 id="gibo-gate-title" className="text-white font-bold text-lg mb-1">
               생기부 도우미
             </h2>
-            <p className="text-gray-400 text-sm mb-5">
+            <p className="text-gray-400 text-base mb-5">
               사이트로 이동하려면 암호를 입력하세요.
             </p>
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -126,7 +126,7 @@ export function GiboLinkProvider({ children }: { children: ReactNode }) {
                 />
               </div>
               {error && (
-                <p className="text-red-400 text-xs" role="alert">
+                <p className="text-red-400 text-sm" role="alert">
                   {error}
                 </p>
               )}
@@ -138,14 +138,14 @@ export function GiboLinkProvider({ children }: { children: ReactNode }) {
                     setPassword('')
                     setError(null)
                   }}
-                  className="px-4 py-2.5 rounded-full text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                  className="px-4 py-2.5 rounded-full text-base font-medium text-gray-400 hover:text-white transition-colors"
                 >
                   취소
                 </button>
                 <button
                   type="submit"
                   disabled={submitting || !password.trim()}
-                  className="px-5 py-2.5 rounded-full text-sm font-bold text-[#0a1a2e] disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:scale-[1.02]"
+                  className="px-5 py-2.5 rounded-full text-base font-bold text-[#0a1a2e] disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:scale-[1.02]"
                   style={{ background: '#60a5fa' }}
                 >
                   {submitting ? '확인 중…' : '이동'}

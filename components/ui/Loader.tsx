@@ -22,8 +22,8 @@ export default function Loader() {
         >
           {/* 몬스터볼 — globals.css의 pb-spin으로 회전 */}
           <div className="pokeball mb-6" role="img" aria-label="로딩 중" />
-          <p className="text-white/50 text-sm tracking-widest">Loading JooK&apos;s Playground...</p>
-          <p className="mt-1.5 text-pikachu/70 text-xs">주크의 놀이터에 오신 것을 환영합니다 ⚡</p>
+          <p className="text-white/50 text-base tracking-widest">Loading JooK&apos;s Playground...</p>
+          <p className="mt-1.5 text-pikachu/70 text-sm">주크의 놀이터에 오신 것을 환영합니다 ⚡</p>
         </motion.div>
       )}
     </AnimatePresence>

@@ -31,7 +31,7 @@ export default function PandasSection() {
       <div className="max-w-7xl mx-auto px-5 relative z-10">
         <FadeIn className="text-center mb-14">
           <div
-            className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full text-xs font-bold"
+            className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full text-sm font-bold"
             style={{
               background: 'rgba(30, 95, 65, 0.35)',
               border: '1px solid rgba(65, 160, 115, 0.4)',
@@ -43,7 +43,7 @@ export default function PandasSection() {
           <h2 className="chalk-font text-white mb-3" style={{ fontSize: 'clamp(28px,5.5vw,52px)' }}>
             PokéPandas
           </h2>
-          <p className="text-sm md:text-base max-w-2xl mx-auto leading-relaxed text-green-100/80">
+          <p className="text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-green-100/80">
             포켓몬 데이터로 배우는 Pandas 인덱싱 &amp; 슬라이싱.
             <br className="hidden sm:block" />
             고등학생 컴퓨터과학 수업용 — 코드 실행을 단계별로 시각화합니다.
@@ -95,8 +95,8 @@ export default function PandasSection() {
                   <div className="flex gap-4">
                     <span className="text-2xl">{h.icon}</span>
                     <div>
-                      <h3 className="text-white font-bold text-base mb-1">{h.title}</h3>
-                      <p className="text-sm leading-relaxed text-green-100/70">{h.desc}</p>
+                      <h3 className="text-white font-bold text-lg mb-1">{h.title}</h3>
+                      <p className="text-base leading-relaxed text-green-100/70">{h.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ export default function PandasSection() {
                 href={LINK_POKEPANDAS}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3.5 rounded-full font-bold text-sm text-center text-[#f0fdf4] hover:scale-[1.02] transition-all shadow-lg"
+                className="flex-1 py-3.5 rounded-full font-bold text-base text-center text-[#f0fdf4] hover:scale-[1.02] transition-all shadow-lg"
                 style={{
                   background: 'linear-gradient(135deg, #2f8f5f 0%, #1e6b47 45%, #124a30 100%)',
                   boxShadow: '0 8px 28px rgba(30, 95, 65, 0.45)',
@@ -119,12 +119,12 @@ export default function PandasSection() {
               <button
                 type="button"
                 onClick={() => document.getElementById('hub-section')?.scrollIntoView({ behavior: 'smooth' })}
-                className="flex-1 py-3.5 rounded-full font-bold text-sm text-green-50 border border-green-400/30 hover:bg-[#071510]/70 transition-all"
+                className="flex-1 py-3.5 rounded-full font-bold text-base text-green-50 border border-green-400/30 hover:bg-[#071510]/70 transition-all"
               >
                 📦 허브에서 보기
               </button>
             </FadeIn>
-            <p className="text-green-200/45 text-xs text-center">v1.0.0</p>
+            <p className="text-green-200/45 text-sm text-center">v1.0.0</p>
           </div>
         </div>
       </div>
