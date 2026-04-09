@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Project, STATUS_LABEL, STATUS_COLOR } from '@/constants/projects'
 import { useModal } from '@/app/providers'
+import { useGiboLink } from '@/components/guards/GiboLinkProvider'
 import clsx from 'clsx'
 
 type Theme = {
@@ -69,6 +70,7 @@ interface Props {
 
 export default function ProjectCard({ project, index }: Props) {
   const { open } = useModal()
+  const { openGibo } = useGiboLink()
   const t = THEME[project.pokemon]
 
   const hasLink = project.status === 'live' || project.status === 'beta'
@@ -76,6 +78,10 @@ export default function ProjectCard({ project, index }: Props) {
   function handleAction() {
     if (!hasLink) return
     if (project.externalUrl) {
+      if (project.id === 'gibo-helper') {
+        void openGibo()
+        return
+      }
       window.open(project.externalUrl, '_blank', 'noopener,noreferrer')
       return
     }

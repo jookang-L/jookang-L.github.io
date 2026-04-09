@@ -2,7 +2,7 @@
 
 import PokemonImage from '@/components/ui/PokemonImage'
 import { FadeIn } from '@/components/ui/FadeIn'
-import { LINK_GIBO } from '@/constants/links'
+import { useGiboLink } from '@/components/guards/GiboLinkProvider'
 
 const FEATURES = [
   { icon: '📄', title: 'PDF 분석 & 자동 정리',    desc: '업로드된 생기부 PDF를 AI가 자동으로 분석하고 핵심을 한눈에 정리해드려요' },
@@ -11,6 +11,8 @@ const FEATURES = [
 ]
 
 export default function GreninjaSection() {
+  const { openGibo } = useGiboLink()
+
   return (
     <section
       id="greninja-section"
@@ -67,12 +69,11 @@ export default function GreninjaSection() {
             ))}
 
             <FadeIn direction="up" delay={0.4} className="flex flex-col sm:flex-row gap-3 pt-2">
-              <a
-                href={LINK_GIBO}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                type="button"
+                onClick={() => void openGibo()}
                 className="flex-1 py-3.5 rounded-full font-bold text-sm bg-white text-greninja hover:scale-105 hover:shadow-xl transition-all text-center"
-              >🌐 웹사이트에서 사용하기</a>
+              >🌐 웹사이트에서 사용하기</button>
               <a
                 href="#faq-section"
                 className="flex-1 py-3.5 rounded-full font-bold text-sm text-white text-center hover:scale-105 transition-all"

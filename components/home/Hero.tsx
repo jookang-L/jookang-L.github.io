@@ -3,7 +3,8 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import PokemonImage from '@/components/ui/PokemonImage'
-import { LINK_GIBO, LINK_POKEPANDAS } from '@/constants/links'
+import { LINK_POKEPANDAS } from '@/constants/links'
+import { useGiboLink } from '@/components/guards/GiboLinkProvider'
 
 const CODE_LINES = `import pandas as pd
 import numpy as np
@@ -40,6 +41,7 @@ function openExternal(url: string) {
 }
 
 export default function Hero() {
+  const { openGibo } = useGiboLink()
   const heroRef = useRef<HTMLElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -143,7 +145,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 max-w-xl mx-auto">
             <button
               type="button"
-              onClick={() => openExternal(LINK_GIBO)}
+              onClick={() => void openGibo()}
               className="px-7 py-3.5 rounded-full font-bold text-sm bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
             >📚 생기부 도우미 (웹)</button>
             <button
@@ -194,7 +196,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 mt-8 max-w-xl mx-auto" style={{ pointerEvents: 'auto' }}>
             <button
               type="button"
-              onClick={() => openExternal(LINK_GIBO)}
+              onClick={() => void openGibo()}
               className="px-7 py-3.5 rounded-full font-bold text-sm bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
             >📚 생기부 도우미 (웹)</button>
             <button

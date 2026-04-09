@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import { ModalProvider } from './providers'
+import { GiboLinkProvider } from '@/components/guards/GiboLinkProvider'
 
 /** 교보 손글씨 2025 — 전역 본문/타이틀 폰트 */
 const kyoboHandwriting = localFont({
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko" className={kyoboHandwriting.variable} suppressHydrationWarning>
       <body className="antialiased">
         <ModalProvider>
-          {children}
+          <GiboLinkProvider>{children}</GiboLinkProvider>
         </ModalProvider>
       </body>
     </html>
