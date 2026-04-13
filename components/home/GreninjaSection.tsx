@@ -31,8 +31,8 @@ export default function GreninjaSection() {
             <span>💧</span>
             <span className="text-white text-sm font-medium" style={{ letterSpacing:'0.06em' }}>개굴닌자와 함께하는</span>
           </div>
-          <h2 className="chalk-font text-white mb-4" style={{ fontSize:'clamp(30px,6vw,60px)' }}>생기부 도우미 with JooK</h2>
-          <p className="text-blue-200 text-lg md:text-xl max-w-xl mx-auto">번거로운 생활기록부 작성, 스마트하게 해결하세요</p>
+          <h2 className="chalk-font text-white mb-4" style={{ fontSize:'clamp(30px,6vw,60px)' }}>생활기록부 분석 with JooK</h2>
+          <p className="text-blue-200 text-lg md:text-xl max-w-xl mx-auto">웹에서 바로 분석하는 생활기록부 분석 도우미</p>
         </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">

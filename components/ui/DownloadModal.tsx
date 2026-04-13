@@ -91,7 +91,7 @@ export default function DownloadModal() {
           />
 
           <motion.div
-            className="relative z-10 w-full max-w-md rounded-3xl p-10"
+            className="relative z-10 w-full max-w-lg rounded-3xl p-10 max-h-[min(92vh,900px)] overflow-y-auto"
             style={{ background: '#111827', border: '1px solid rgba(255,222,0,0.3)' }}
             initial={{ scale: 0.88, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -116,6 +116,28 @@ export default function DownloadModal() {
               <p className="text-gray-400 text-base">운영체제를 선택해주세요</p>
             </div>
 
+            {isDashboard && hasWin && (
+              <div className="mb-6 space-y-3">
+                <div
+                  className="rounded-xl overflow-hidden flex justify-center py-2"
+                  style={{ border: '1px solid rgba(255,255,255,0.1)', background: 'rgba(0,0,0,0.25)' }}
+                >
+                  <img
+                    src="/ico/edge-download-smartscreen-hint.png"
+                    alt="Microsoft Edge 다운로드 창: ⋯ 메뉴에서 유지 선택"
+                    className="h-auto w-auto max-w-[min(100%,320px)] max-h-[200px] object-contain"
+                  />
+                </div>
+                <p className="text-center text-base leading-relaxed px-1 font-semibold text-gray-200">
+                  직접 제작·배포한 <span className="text-white font-bold">안전한 파일</span>입니다. 위와 같이 안내가 뜨면,
+                  다운로드 창
+                  <br />
+                  오른쪽 위 <span className="text-white font-bold">⋯</span>을 누른 뒤{' '}
+                  <span className="text-white font-bold">유지</span>를 선택해 다운로드를 계속 진행해 주세요.
+                </p>
+              </div>
+            )}
+
             <div className="space-y-3 mb-4">
               <button
                 type="button"
@@ -137,11 +159,7 @@ export default function DownloadModal() {
             </div>
 
             {isDashboard && !hasMac && (
-              <p className="text-center text-amber-200/90 text-sm mb-3">
-                macOS용 파일을 <code className="text-xs opacity-90">public/</code>에{' '}
-                <code className="text-xs opacity-90">Jook Board Setup x.y.z.dmg</code> 형식으로 넣으면 자동으로
-                인식됩니다.
-              </p>
+              <p className="text-center text-gray-400 text-sm mb-3">macOS용 파일은 준비중에 있습니다</p>
             )}
 
             <div

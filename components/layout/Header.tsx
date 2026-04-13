@@ -15,7 +15,7 @@ const NAV_ITEMS = [
   {
     label: '💧 생활기록부',
     links: [
-      { href: '#greninja-section', icon: '📚', title: '생기부 도우미 사용법', desc: '단계별 사용 가이드' },
+      { href: '#greninja-section', icon: '📚', title: '생활기록부 분석 사용법', desc: '단계별 사용 가이드' },
       { href: '#greninja-section', icon: '📊', title: '데이터 분석 Q&A',      desc: '자주 묻는 분석 관련 질문' },
       { href: '#contact-section',  icon: '💡', title: '개선 제안',            desc: '기능 요청 및 피드백' },
     ],

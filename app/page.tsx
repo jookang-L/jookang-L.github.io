@@ -30,7 +30,7 @@ export default function Page() {
         {/* S2 : 프로젝트 허브 카드 */}
         <ProjectHub />
 
-        {/* S3 : 생기부 도우미 — 개굴닌자 */}
+        {/* S3 : 생활기록부 분석 — 개굴닌자 */}
         <GreninjaSection />
 
         {/* S4 : 올인원 대시보드 — 초염몽 */}

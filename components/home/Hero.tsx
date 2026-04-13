@@ -20,7 +20,7 @@ class SchoolDashboard:
     def get_today_meal(self):
         return self.meal_api.fetch(date="today")
 
-# 생기부 도우미
+# 생활기록부 분석
 def analyze_student_record(pdf_path):
     data    = extract_text(pdf_path)
     summary = ai_summarize(data)
@@ -143,19 +143,18 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => void openGibo()}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
-            >📚 생기부 도우미 (웹)</button>
-            <button
-              type="button"
-              onClick={() => openExternal(LINK_POKEPANDAS)}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-pikachu/90 text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_28px_rgba(255,222,0,0.45)] transition-all"
-            >🐼 PokéPandas</button>
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-greninja text-white hover:scale-105 hover:shadow-[0_0_32px_rgba(0,140,255,0.5)] transition-all"
+            >📊 생활기록부 분석</button>
             <button
               type="button"
               onClick={() => openDownloadModal('올인원 대시보드')}
-              className="px-7 py-3.5 rounded-full font-bold text-base text-white hover:scale-105 transition-all"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)' }}
-            >🔥 대시보드 다운로드</button>
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-infernape text-white hover:scale-105 hover:shadow-[0_0_32px_rgba(255,100,40,0.55)] transition-all"
+            >🔥 올인원 대시보드</button>
+            <button
+              type="button"
+              onClick={() => openExternal(LINK_POKEPANDAS)}
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-[#2f8f5f] text-[#f0fdf4] hover:scale-105 hover:shadow-[0_0_28px_rgba(47,143,95,0.55)] transition-all"
+            >🐼 pokepandas</button>
           </div>
         </motion.div>
 
@@ -194,19 +193,18 @@ export default function Hero() {
             <button
               type="button"
               onClick={() => void openGibo()}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
-            >📚 생기부 도우미 (웹)</button>
-            <button
-              type="button"
-              onClick={() => openExternal(LINK_POKEPANDAS)}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-pikachu/90 text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_28px_rgba(255,222,0,0.45)] transition-all"
-            >🐼 PokéPandas</button>
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-greninja text-white hover:scale-105 hover:shadow-[0_0_32px_rgba(0,140,255,0.5)] transition-all"
+            >📊 생활기록부 분석</button>
             <button
               type="button"
               onClick={() => openDownloadModal('올인원 대시보드')}
-              className="px-7 py-3.5 rounded-full font-bold text-base text-white hover:scale-105 transition-all"
-              style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)' }}
-            >🔥 대시보드 다운로드</button>
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-infernape text-white hover:scale-105 hover:shadow-[0_0_32px_rgba(255,100,40,0.55)] transition-all"
+            >🔥 올인원 대시보드</button>
+            <button
+              type="button"
+              onClick={() => openExternal(LINK_POKEPANDAS)}
+              className="px-7 py-3.5 rounded-full font-bold text-base bg-[#2f8f5f] text-[#f0fdf4] hover:scale-105 hover:shadow-[0_0_28px_rgba(47,143,95,0.55)] transition-all"
+            >🐼 pokepandas</button>
           </div>
         </motion.div>
       </div>

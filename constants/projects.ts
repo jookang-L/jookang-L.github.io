@@ -31,10 +31,10 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     id: 'gibo-helper',
-    name: '생기부 도우미',
-    description: '웹에서 바로 쓰는 생활기록부 작성 도우미',
+    name: '생활기록부 분석',
+    description: '웹에서 바로 분석하는 생활기록부 분석 도우미',
     longDesc:
-      '자율·진로, 교과세특, 동아리, 행특 등 카테고리별로 생기부 작성을 돕는 웹 서비스입니다. 별도 설치 없이 브라우저에서 이용하세요.',
+      '자율, 진로, 동아리, 봉사, 교과세특 카테고리별 생기부 내용 분석을 돕는 웹 서비스입니다. 별도 설치 없이 브라우저에서 이용하세요.',
     icon: '📚',
     pokemon: 'greninja',
     status: 'live',

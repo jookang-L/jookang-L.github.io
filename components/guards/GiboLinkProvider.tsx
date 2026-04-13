@@ -100,7 +100,7 @@ export function GiboLinkProvider({ children }: { children: ReactNode }) {
             }}
           >
             <h2 id="gibo-gate-title" className="text-white font-bold text-lg mb-1">
-              생기부 도우미
+              생활기록부 분석
             </h2>
             <p className="text-gray-400 text-base mb-5">
               사이트로 이동하려면 암호를 입력하세요.

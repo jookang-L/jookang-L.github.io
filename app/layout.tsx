@@ -14,7 +14,7 @@ const kyoboHandwriting = localFont({
 
 export const metadata: Metadata = {
   title: '주크(JooK)의 놀이터 — 교사를 위한 디지털 도구',
-  description: '현직 교사 주강(JooK)이 만드는 교사용 웹앱 허브. 생기부 도우미, 올인원 대시보드 등 무료 제공.',
+  description: '현직 교사 주강(JooK)이 만드는 교사용 웹앱 허브. 생활기록부 분석, 올인원 대시보드 등 무료 제공.',
   icons: { icon: '/ico/pikachu.png' },
 }
 
