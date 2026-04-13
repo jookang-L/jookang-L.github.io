@@ -3,6 +3,14 @@
 import PokemonImage from '@/components/ui/PokemonImage'
 import { FadeIn, ZoomIn } from '@/components/ui/FadeIn'
 import { useModal } from '@/app/providers'
+import {
+  DASHBOARD_SETUP_VERSION,
+  DASHBOARD_MAC_PUBLIC_PATH,
+} from '@/constants/dashboard-download.generated'
+
+const dashboardVer =
+  (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_DASHBOARD_SETUP_VERSION) ||
+  DASHBOARD_SETUP_VERSION
 
 const FEATURE_GRID = [
   { icon: '📁', label: '파일함',   desc: '수업자료\n통합관리' },
@@ -87,7 +95,10 @@ export default function InfernapeSection() {
                   onClick={() => open('올인원 대시보드')}
                   className="w-full py-3.5 rounded-full font-bold text-base bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
                 >⬇️ 최신 버전 다운로드</button>
-                <p className="text-orange-200 text-sm text-center mt-2">v1.0.0 · Windows / macOS · 무료</p>
+                <p className="text-orange-200 text-sm text-center mt-2">
+                  {dashboardVer ? `v${dashboardVer}` : '최신'} · Windows
+                  {DASHBOARD_MAC_PUBLIC_PATH ? ' / macOS' : ''} · 무료
+                </p>
               </FadeIn>
             </div>
 

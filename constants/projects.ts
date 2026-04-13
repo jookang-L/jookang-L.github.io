@@ -1,4 +1,9 @@
 import { LINK_GIBO, LINK_POKEPANDAS } from '@/constants/links'
+import { DASHBOARD_SETUP_VERSION } from '@/constants/dashboard-download.generated'
+
+const dashboardVer =
+  (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_DASHBOARD_SETUP_VERSION) ||
+  DASHBOARD_SETUP_VERSION
 
 export type PokemonType = 'pikachu' | 'greninja' | 'infernape' | 'pokepandas'
 export type ProjectStatus = 'live' | 'beta' | 'soon'
@@ -47,7 +52,7 @@ export const PROJECTS: Project[] = [
     icon: '📊',
     pokemon: 'infernape',
     status: 'live',
-    badge: 'v1.0',
+    badge: dashboardVer ? `v${dashboardVer}` : 'Desktop',
     downloadUrl: {
       windows: '',
       mac: '',

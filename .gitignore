@@ -11,3 +11,8 @@
 
 # debug
 npm-debug.log*
+
+# 설치 파일 — GitHub 100MB 제한 (exe는 Releases·환경변수 URL로 배포)
+public/*.exe
+public/*.dmg
+public/*.pkg

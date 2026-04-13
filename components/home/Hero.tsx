@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import PokemonImage from '@/components/ui/PokemonImage'
 import { LINK_POKEPANDAS } from '@/constants/links'
 import { useGiboLink } from '@/components/guards/GiboLinkProvider'
+import { useModal } from '@/app/providers'
 
 const CODE_LINES = `import pandas as pd
 import numpy as np
@@ -31,17 +32,13 @@ if __name__ == '__main__':
     board = SchoolDashboard("B100000000")
     board.run()  # 🔥 열정을 코드로`
 
-function smoothScroll(href: string) {
-  const el = document.querySelector(href)
-  if (el) el.scrollIntoView({ behavior: 'smooth' })
-}
-
 function openExternal(url: string) {
   window.open(url, '_blank', 'noopener,noreferrer')
 }
 
 export default function Hero() {
   const { openGibo } = useGiboLink()
+  const { open: openDownloadModal } = useModal()
   const heroRef = useRef<HTMLElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -155,7 +152,7 @@ export default function Hero() {
             >🐼 PokéPandas</button>
             <button
               type="button"
-              onClick={() => smoothScroll('#infernape-section')}
+              onClick={() => openDownloadModal('올인원 대시보드')}
               className="px-7 py-3.5 rounded-full font-bold text-base text-white hover:scale-105 transition-all"
               style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)' }}
             >🔥 대시보드 다운로드</button>
@@ -206,7 +203,7 @@ export default function Hero() {
             >🐼 PokéPandas</button>
             <button
               type="button"
-              onClick={() => smoothScroll('#infernape-section')}
+              onClick={() => openDownloadModal('올인원 대시보드')}
               className="px-7 py-3.5 rounded-full font-bold text-base text-white hover:scale-105 transition-all"
               style={{ background: 'rgba(255,255,255,0.1)', border: '1px solid rgba(255,255,255,0.25)' }}
             >🔥 대시보드 다운로드</button>
