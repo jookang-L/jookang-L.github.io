@@ -61,6 +61,17 @@ const THEME: Record<string, Theme> = {
     tagBg:    'rgba(52, 140, 95, 0.2)',
     tagColor: '#a3e4c0',
   },
+  /* 판사시스템 — 에이팜(라벤더 퍼플 · 크림 악센트) */
+  aipom: {
+    glow:     'rgba(165, 122, 196, 0.42)',
+    border:   'rgba(180, 140, 215, 0.48)',
+    accent:   '#b894d9',
+    btn:      'linear-gradient(135deg, #9d73c4 0%, #7d529f 42%, #5c3d78 100%)',
+    btnText:  '#fffbf5',
+    iconBg:   'rgba(140, 100, 180, 0.28)',
+    tagBg:    'rgba(165, 122, 196, 0.18)',
+    tagColor: '#e8d4f5',
+  },
 }
 
 interface Props {

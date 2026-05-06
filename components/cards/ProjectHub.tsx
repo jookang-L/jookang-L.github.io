@@ -28,7 +28,7 @@ export default function ProjectHub() {
 
         {/* 카드 그리드
             ─ constants/projects.ts 에 항목을 추가하면 자동으로 카드가 생성됩니다 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
           {PROJECTS.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}

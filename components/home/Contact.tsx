@@ -102,7 +102,7 @@ export default function Contact() {
                   style={{ background:'#0f0f1e', border:'1px solid rgba(255,255,255,0.1)' }}
                   defaultValue="생활기록부 분석"
                 >
-                  {['생활기록부 분석','올인원 대시보드','PokéPandas','기능 제안','버그 제보 🐛','기타'].map((o) => (
+                  {['생활기록부 분석','올인원 대시보드','PokéPandas','판사시스템','기능 제안','버그 제보 🐛','기타'].map((o) => (
                     <option key={o}>{o}</option>
                   ))}
                 </select>

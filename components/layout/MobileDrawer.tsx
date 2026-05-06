@@ -13,6 +13,7 @@ const DRAWER_LINKS = [
   { label: '생활기록부',     links: [{ href: '#greninja-section', text: '📚 사용법 가이드' }, { href: '#greninja-section', text: '📊 데이터 분석 Q&A' }] },
   { label: '올인원 대시보드', links: [{ href: '#infernape-section', text: '⬇️ 설치 파일 다운로드' }, { href: '#contact-section', text: '🐛 버그 제보' }] },
   { label: 'Pandas',         links: [{ href: '#pandas-section', text: '🐼 PokéPandas 소개' }, { href: 'https://df-one-sigma.vercel.app/', text: '🚀 PokéPandas 열기' }] },
+  { label: '판사시스템',     links: [{ href: '#aipom-section', text: '⚖️ 판사시스템 소개' }, { href: 'https://judge-chi.vercel.app/', text: '🚀 판사시스템 열기' }] },
   { label: 'CONTACT',        links: [{ href: '#contact-section', text: '💬 1:1 질문하기' }, { href: '#faq-section', text: '❓ FAQ' }] },
 ]
 

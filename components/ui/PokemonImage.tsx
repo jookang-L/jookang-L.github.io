@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useRef, useEffect } from 'react'
 import clsx from 'clsx'
 
-type PokeType = 'pikachu' | 'greninja' | 'infernape' | 'sceptile'
+type PokeType = 'pikachu' | 'greninja' | 'infernape' | 'sceptile' | 'aipom'
 
 interface Props {
   src:       string
@@ -52,8 +52,20 @@ const PARTICLE_CONFIGS = {
     cssClass: 'grass',
     interval: 95,
     upBias:   0.25,
-    minDist: 48, maxDist: 118,
-    minSize: 11, maxSize: 21,
+    minDist:  48,
+    maxDist:  118,
+    minSize:  11,
+    maxSize:  21,
+  },
+  purple: {
+    emojis:   ['⚖️', '✦', '💜', '◆', '✧'],
+    cssClass: 'purple',
+    interval: 88,
+    upBias:   0.35,
+    minDist:  50,
+    maxDist:  120,
+    minSize:  11,
+    maxSize:  21,
   },
 }
 
@@ -62,6 +74,7 @@ const TYPE_MAP: Record<PokeType, keyof typeof PARTICLE_CONFIGS> = {
   greninja:  'water',
   infernape: 'fire',
   sceptile:  'grass',
+  aipom:     'purple',
 }
 
 export default function PokemonImage({

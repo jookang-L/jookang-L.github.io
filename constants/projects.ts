@@ -1,11 +1,11 @@
-import { LINK_GIBO, LINK_POKEPANDAS } from '@/constants/links'
+import { LINK_GIBO, LINK_POKEPANDAS, LINK_JUDGE } from '@/constants/links'
 import { DASHBOARD_SETUP_VERSION } from '@/constants/dashboard-download.generated'
 
 const dashboardVer =
   (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_DASHBOARD_SETUP_VERSION) ||
   DASHBOARD_SETUP_VERSION
 
-export type PokemonType = 'pikachu' | 'greninja' | 'infernape' | 'pokepandas'
+export type PokemonType = 'pikachu' | 'greninja' | 'infernape' | 'pokepandas' | 'aipom'
 export type ProjectStatus = 'live' | 'beta' | 'soon'
 
 export interface Project {
@@ -71,6 +71,19 @@ export const PROJECTS: Project[] = [
     badge: 'Web',
     externalUrl: LINK_POKEPANDAS,
     tags: ['Python', 'Pandas', '코딩 교육'],
+  },
+  {
+    id: 'judge-system',
+    name: '판사시스템',
+    description: '학생 참여형 AI 법정 · 사건 정리와 판례 탐색',
+    longDesc:
+      '학생 입력 → AI 사건 정리 → 판례 탐색 순으로 진행되는 교육용 웹 서비스입니다. 형사·민사·학교생활 등 사건 유형을 선택해 모의 재판 흐름을 경험할 수 있습니다.',
+    icon: '⚖️',
+    pokemon: 'aipom',
+    status: 'live',
+    badge: 'Web',
+    externalUrl: LINK_JUDGE,
+    tags: ['AI 법정', '교육', '모의재판'],
   },
 ]
 

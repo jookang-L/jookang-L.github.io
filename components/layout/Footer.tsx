@@ -12,6 +12,7 @@ const FOOTER_LINKS = [
       { label: '생활기록부 분석', href: '#greninja-section' },
       { label: 'PokéPandas',      href: '#pandas-section' },
       { label: '올인원 대시보드', href: '#infernape-section' },
+      { label: '판사시스템',      href: '#aipom-section' },
     ],
   },
   {

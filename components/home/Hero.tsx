@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import PokemonImage from '@/components/ui/PokemonImage'
-import { LINK_POKEPANDAS } from '@/constants/links'
+import { LINK_POKEPANDAS, LINK_JUDGE } from '@/constants/links'
 import { useGiboLink } from '@/components/guards/GiboLinkProvider'
 import { useModal } from '@/app/providers'
 
@@ -139,7 +139,7 @@ export default function Hero() {
           <p className="text-white/75 text-base md:text-xl mb-10">
             선생님의 업무를 조금 더 가볍게 만들어드릴게요
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 max-w-xl mx-auto">
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto">
             <button
               type="button"
               onClick={() => void openGibo()}
@@ -155,6 +155,15 @@ export default function Hero() {
               onClick={() => openExternal(LINK_POKEPANDAS)}
               className="px-7 py-3.5 rounded-full font-bold text-base bg-[#2f8f5f] text-[#f0fdf4] hover:scale-105 hover:shadow-[0_0_28px_rgba(47,143,95,0.55)] transition-all"
             >🐼 pokepandas</button>
+            <button
+              type="button"
+              onClick={() => openExternal(LINK_JUDGE)}
+              className="px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:shadow-[0_0_28px_rgba(165,122,196,0.55)] transition-all"
+              style={{
+                background: 'linear-gradient(135deg, #9d73c4 0%, #7d529f 48%, #6b4588 100%)',
+                color: '#fffbf5',
+              }}
+            >⚖️ 판사시스템</button>
           </div>
         </motion.div>
 
@@ -189,7 +198,7 @@ export default function Hero() {
               <span className="animate-blink" style={{ color: 'var(--pikachu)', fontSize: 16 }}>█</span>
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 mt-8 max-w-xl mx-auto" style={{ pointerEvents: 'auto' }}>
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 mt-8 max-w-3xl mx-auto" style={{ pointerEvents: 'auto' }}>
             <button
               type="button"
               onClick={() => void openGibo()}
@@ -205,6 +214,15 @@ export default function Hero() {
               onClick={() => openExternal(LINK_POKEPANDAS)}
               className="px-7 py-3.5 rounded-full font-bold text-base bg-[#2f8f5f] text-[#f0fdf4] hover:scale-105 hover:shadow-[0_0_28px_rgba(47,143,95,0.55)] transition-all"
             >🐼 pokepandas</button>
+            <button
+              type="button"
+              onClick={() => openExternal(LINK_JUDGE)}
+              className="px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:shadow-[0_0_28px_rgba(165,122,196,0.55)] transition-all"
+              style={{
+                background: 'linear-gradient(135deg, #9d73c4 0%, #7d529f 48%, #6b4588 100%)',
+                color: '#fffbf5',
+              }}
+            >⚖️ 판사시스템</button>
           </div>
         </motion.div>
       </div>

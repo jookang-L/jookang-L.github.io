@@ -39,6 +39,14 @@ const NAV_ITEMS = [
     cols: 2,
   },
   {
+    label: '⚖️ 판사시스템',
+    links: [
+      { href: '#aipom-section', icon: '⚖️', title: '판사시스템 소개', desc: 'AI 법정 섹션으로 이동' },
+      { href: 'https://judge-chi.vercel.app/', icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 AI 법정 열기' },
+    ],
+    cols: 2,
+  },
+  {
     label: '🌟 CONTACT',
     links: [
       { href: '#contact-section', icon: '💬', title: '1:1 질문하기', desc: '직접 문의 및 질문 보내기' },

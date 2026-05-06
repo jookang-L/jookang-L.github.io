@@ -6,6 +6,7 @@ import Hero          from '@/components/home/Hero'
 import GreninjaSection   from '@/components/home/GreninjaSection'
 import InfernapeSection  from '@/components/home/InfernapeSection'
 import PandasSection     from '@/components/home/PandasSection'
+import AipomSection      from '@/components/home/AipomSection'
 import ProjectHub    from '@/components/cards/ProjectHub'
 import About         from '@/components/home/About'
 import Updates       from '@/components/home/Updates'
@@ -39,11 +40,14 @@ export default function Page() {
         {/* S5 : PokéPandas — 나무킹 테마 */}
         <PandasSection />
 
-        {/* S6 : ABOUT & 업데이트 */}
+        {/* S6 : 판사시스템 — 에이팜 테마 */}
+        <AipomSection />
+
+        {/* S7 : ABOUT & 업데이트 */}
         <About />
         <Updates />
 
-        {/* S7 : Contact & FAQ */}
+        {/* S8 : Contact & FAQ */}
         <Contact />
       </main>
 
