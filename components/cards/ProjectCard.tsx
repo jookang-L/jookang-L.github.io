@@ -72,6 +72,17 @@ const THEME: Record<string, Theme> = {
     tagBg:    'rgba(165, 122, 196, 0.18)',
     tagColor: '#e8d4f5',
   },
+  /* 기계학습 실습 웹사이트 — 이브이(따뜻한 브라운 · 크림 악센트) */
+  eevee: {
+    glow:     'rgba(190, 135, 72, 0.4)',
+    border:   'rgba(210, 155, 92, 0.48)',
+    accent:   '#d7a15f',
+    btn:      'linear-gradient(135deg, #d7a15f 0%, #9b6534 45%, #5b341d 100%)',
+    btnText:  '#fff7ed',
+    iconBg:   'rgba(175, 115, 56, 0.26)',
+    tagBg:    'rgba(190, 135, 72, 0.18)',
+    tagColor: '#fed7aa',
+  },
 }
 
 interface Props {

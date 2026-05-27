@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import PokemonImage from '@/components/ui/PokemonImage'
-import { LINK_POKEPANDAS, LINK_JUDGE } from '@/constants/links'
+import { LINK_POKEPANDAS, LINK_JUDGE, LINK_MACHINE_LEARNING } from '@/constants/links'
 import { useGiboLink } from '@/components/guards/GiboLinkProvider'
 import { useModal } from '@/app/providers'
 
@@ -164,6 +164,15 @@ export default function Hero() {
                 color: '#fffbf5',
               }}
             >⚖️ 판사시스템</button>
+            <button
+              type="button"
+              onClick={() => openExternal(LINK_MACHINE_LEARNING)}
+              className="px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:shadow-[0_0_28px_rgba(190,135,72,0.55)] transition-all"
+              style={{
+                background: 'linear-gradient(135deg, #d7a15f 0%, #9b6534 48%, #5b341d 100%)',
+                color: '#fff7ed',
+              }}
+            >🦊 기계학습 실습</button>
           </div>
         </motion.div>
 
@@ -223,6 +232,15 @@ export default function Hero() {
                 color: '#fffbf5',
               }}
             >⚖️ 판사시스템</button>
+            <button
+              type="button"
+              onClick={() => openExternal(LINK_MACHINE_LEARNING)}
+              className="px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:shadow-[0_0_28px_rgba(190,135,72,0.55)] transition-all"
+              style={{
+                background: 'linear-gradient(135deg, #d7a15f 0%, #9b6534 48%, #5b341d 100%)',
+                color: '#fff7ed',
+              }}
+            >🦊 기계학습 실습</button>
           </div>
         </motion.div>
       </div>

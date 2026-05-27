@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import MobileDrawer from './MobileDrawer'
+import { LINK_MACHINE_LEARNING } from '@/constants/links'
 
 const NAV_ITEMS = [
   {
@@ -43,6 +44,14 @@ const NAV_ITEMS = [
     links: [
       { href: '#aipom-section', icon: '⚖️', title: '판사시스템 소개', desc: 'AI 법정 섹션으로 이동' },
       { href: 'https://judge-chi.vercel.app/', icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 AI 법정 열기' },
+    ],
+    cols: 2,
+  },
+  {
+    label: '🦊 기계학습',
+    links: [
+      { href: '#eevee-section', icon: '🧠', title: '기계학습 실습 소개', desc: 'sklearn 실습 플랫폼 섹션으로 이동' },
+      { href: LINK_MACHINE_LEARNING, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 기계학습 실습 열기' },
     ],
     cols: 2,
   },
@@ -112,7 +121,7 @@ export default function Header() {
           </a>
 
           {/* 데스크탑 메뉴 */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden xl:flex items-center gap-1">
             {NAV_ITEMS.map((item) => (
               <div key={item.label} className="nav-item relative">
                 <button
@@ -153,7 +162,7 @@ export default function Header() {
 
           {/* 모바일 햄버거 */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="xl:hidden flex flex-col gap-1.5 p-2"
             onClick={() => setDrawerOpen(true)}
             aria-label="메뉴 열기"
           >

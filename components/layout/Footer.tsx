@@ -13,6 +13,7 @@ const FOOTER_LINKS = [
       { label: 'PokéPandas',      href: '#pandas-section' },
       { label: '올인원 대시보드', href: '#infernape-section' },
       { label: '판사시스템',      href: '#aipom-section' },
+      { label: '기계학습 실습',   href: '#eevee-section' },
     ],
   },
   {

@@ -83,6 +83,7 @@ body {
 .pokemon-wrap.infernape:hover .pokemon-img { transform: scale(1.08) translateY(-6px); filter: drop-shadow(0 0 18px rgba(255,120,0,0.95)) drop-shadow(0 0 48px rgba(255,60,0,0.5)); }
 .pokemon-wrap.sceptile:hover  .pokemon-img { transform: scale(1.08) translateY(-6px); filter: drop-shadow(0 0 18px rgba(120,230,190,0.95)) drop-shadow(0 0 48px rgba(50,180,130,0.45)); }
 .pokemon-wrap.aipom:hover     .pokemon-img { transform: scale(1.08) translateY(-6px); filter: drop-shadow(0 0 18px rgba(200,160,235,0.95)) drop-shadow(0 0 48px rgba(140,90,180,0.48)); }
+.pokemon-wrap.eevee:hover     .pokemon-img { transform: scale(1.08) translateY(-6px); filter: drop-shadow(0 0 18px rgba(245,200,140,0.95)) drop-shadow(0 0 48px rgba(170,105,55,0.5)); }
 
 /* 흰 단색 배경(JFIF/PNG): img에 filter 쓰면 mix-blend가 깨져 흰 네모로 보임 → 그림자는 래퍼(.pokemon-wrap--knockout)만 */
 .pokemon-wrap--knockout {
@@ -125,6 +126,7 @@ body {
 .poke-particle.fire     { color: #FF6820; text-shadow: 0 0 8px rgba(255,100,0,0.9); }
 .poke-particle.grass    { color: #8FE8C0; text-shadow: 0 0 8px rgba(80,220,160,0.9); }
 .poke-particle.purple   { color: #d4b8ec; text-shadow: 0 0 8px rgba(180,130,220,0.95); }
+.poke-particle.normal   { color: #f5c98e; text-shadow: 0 0 8px rgba(215,150,80,0.95); }
 
 @keyframes poke-fly {
   0%   { opacity:1;   transform: translate(0,0) scale(1.2) rotate(0deg); }
@@ -144,6 +146,7 @@ body {
 .pokemon-wrap.infernape::after { background: radial-gradient(ellipse, rgba(255,100,0,0.25)  0%, transparent 70%); }
 .pokemon-wrap.sceptile::after  { background: radial-gradient(ellipse, rgba(80,200,140,0.28) 0%, transparent 70%); }
 .pokemon-wrap.aipom::after     { background: radial-gradient(ellipse, rgba(180,130,220,0.32) 0%, transparent 70%); }
+.pokemon-wrap.eevee::after     { background: radial-gradient(ellipse, rgba(210,150,90,0.32) 0%, transparent 70%); }
 .pokemon-wrap:hover::after     { width: 90%; height: 24px; bottom: -14px; }
 
 /* 호버 시 테두리 반짝임 (::after는 그림자 링용이므로 반짝 레이어는 ::before) */
@@ -189,6 +192,10 @@ body {
 /* 에이팜 — 라벤더 테두리 */
 .pokemon-wrap.pokemon-sparkle.aipom:hover::before {
   border-color: rgba(220, 190, 255, 0.92);
+}
+/* 이브이 — 크림 브라운 테두리 */
+.pokemon-wrap.pokemon-sparkle.eevee:hover::before {
+  border-color: rgba(255, 225, 185, 0.94);
 }
 
 /* ─── 공통 유틸리티 ─── */

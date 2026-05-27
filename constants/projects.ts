@@ -1,11 +1,11 @@
-import { LINK_GIBO, LINK_POKEPANDAS, LINK_JUDGE } from '@/constants/links'
+import { LINK_GIBO, LINK_POKEPANDAS, LINK_JUDGE, LINK_MACHINE_LEARNING } from '@/constants/links'
 import { DASHBOARD_SETUP_VERSION } from '@/constants/dashboard-download.generated'
 
 const dashboardVer =
   (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_DASHBOARD_SETUP_VERSION) ||
   DASHBOARD_SETUP_VERSION
 
-export type PokemonType = 'pikachu' | 'greninja' | 'infernape' | 'pokepandas' | 'aipom'
+export type PokemonType = 'pikachu' | 'greninja' | 'infernape' | 'pokepandas' | 'aipom' | 'eevee'
 export type ProjectStatus = 'live' | 'beta' | 'soon'
 
 export interface Project {
@@ -84,6 +84,19 @@ export const PROJECTS: Project[] = [
     badge: 'Web',
     externalUrl: LINK_JUDGE,
     tags: ['AI 법정', '교육', '모의재판'],
+  },
+  {
+    id: 'machine-learning-lab',
+    name: '기계학습 실습 웹사이트',
+    description: 'sklearn으로 배우는 고등학생용 기계학습 실습 플랫폼',
+    longDesc:
+      'Gemini API Key를 입력해 연결한 뒤, 브라우저에서 sklearn 기반 기계학습 실습을 바로 진행할 수 있는 수업용 웹 서비스입니다.',
+    icon: '🧪',
+    pokemon: 'eevee',
+    status: 'live',
+    badge: 'Web',
+    externalUrl: LINK_MACHINE_LEARNING,
+    tags: ['기계학습', 'sklearn', '실습'],
   },
 ]
 

@@ -7,6 +7,7 @@ import GreninjaSection   from '@/components/home/GreninjaSection'
 import InfernapeSection  from '@/components/home/InfernapeSection'
 import PandasSection     from '@/components/home/PandasSection'
 import AipomSection      from '@/components/home/AipomSection'
+import EeveeSection      from '@/components/home/EeveeSection'
 import ProjectHub    from '@/components/cards/ProjectHub'
 import About         from '@/components/home/About'
 import Updates       from '@/components/home/Updates'
@@ -43,11 +44,14 @@ export default function Page() {
         {/* S6 : 판사시스템 — 에이팜 테마 */}
         <AipomSection />
 
-        {/* S7 : ABOUT & 업데이트 */}
+        {/* S7 : 기계학습 실습 웹사이트 — 이브이 테마 */}
+        <EeveeSection />
+
+        {/* S8 : ABOUT & 업데이트 */}
         <About />
         <Updates />
 
-        {/* S8 : Contact & FAQ */}
+        {/* S9 : Contact & FAQ */}
         <Contact />
       </main>
 
