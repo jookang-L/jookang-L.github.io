@@ -2,33 +2,30 @@
 
 import PokemonImage from '@/components/ui/PokemonImage'
 import { FadeIn, ZoomIn } from '@/components/ui/FadeIn'
-import { useModal } from '@/app/providers'
-import {
-  DASHBOARD_SETUP_VERSION,
-  DASHBOARD_MAC_PUBLIC_PATH,
-} from '@/constants/dashboard-download.generated'
-
-const dashboardVer =
-  (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_DASHBOARD_SETUP_VERSION) ||
-  DASHBOARD_SETUP_VERSION
+import { LINK_BOOKMARK } from '@/constants/links'
 
 const FEATURE_GRID = [
-  { icon: '📁', label: '파일함',   desc: '수업자료\n통합관리' },
-  { icon: '📅', label: '캘린더',   desc: '일정&시간표\n자동연동' },
-  { icon: '🍱', label: '급식 정보', desc: '나이스 연동\n실시간조회' },
+  { icon: '🔖', label: '책갈피',   desc: '오른쪽 가장자리\n클릭 한 번' },
+  { icon: '📝', label: '리치 메모', desc: '굵게·체크·링크\n자동 저장' },
+  { icon: '💾', label: '오프라인', desc: '인터넷 없이\nPC에만 저장' },
 ]
 
 const FEATURE_LIST = [
-  '학사 일정 자동 연동 및 스마트 알림',
-  '나이스(NEIS) API 급식 정보 실시간 조회',
-  '수업 자료 원클릭 정리 및 공유',
-  '교사 전용 위젯 커스터마이징',
-  '다크 / 라이트 모드 지원',
+  '리치 텍스트 메모 — 굵게, 형광펜, 체크박스, 링크',
+  '입력 후 잠시 멈추면 자동 저장',
+  '자주 쓰는 메모를 가장자리 책갈피로 고정 · 드래그 정렬',
+  '고정 창으로 다른 모니터·위치에 메모 배치',
+  '검색·정렬·필터 — 오늘/이번 주/중요/보관함/휴지통',
+  '전역 단축키 Ctrl + Shift + B · 트레이 아이콘',
 ]
 
-export default function InfernapeSection() {
-  const { open } = useModal()
+const BOOKMARK_TAB_COLORS = ['#f87171', '#fbbf24', '#34d399', '#60a5fa', '#a78bfa']
 
+function openBookmarkReleases() {
+  window.open(LINK_BOOKMARK, '_blank', 'noopener,noreferrer')
+}
+
+export default function InfernapeSection() {
   return (
     <>
       {/* 웨이브 디바이더 */}
@@ -52,10 +49,12 @@ export default function InfernapeSection() {
           <FadeIn className="text-center mb-16">
             <div className="inline-flex items-center gap-2 mb-4 px-4 py-2 rounded-full" style={{ background:'rgba(255,255,255,0.12)', border:'1px solid rgba(255,255,255,0.2)' }}>
               <span className="animate-flame">🔥</span>
-              <span className="text-white text-sm font-medium" style={{ letterSpacing:'0.06em' }}>초염몽의 열정으로 만든</span>
+              <span className="text-white text-sm font-medium" style={{ letterSpacing:'0.06em' }}>Windows · Bookmark</span>
             </div>
-            <h2 className="chalk-font text-white mb-4" style={{ fontSize:'clamp(30px,6vw,60px)' }}>교사용 올인원 대시보드</h2>
-            <p className="text-orange-100 text-lg md:text-xl max-w-xl mx-auto">파일함 · 캘린더 · 급식 정보 — 모든 것이 하나의 화면에</p>
+            <h2 className="chalk-font text-white mb-4" style={{ fontSize:'clamp(30px,6vw,60px)' }}>가장 편한 메모앱</h2>
+            <p className="text-orange-100 text-lg md:text-xl max-w-xl mx-auto">
+              화면 오른쪽 가장자리 — 클릭 한 번으로 메모, 자동 저장, 인터넷 없이 PC에만 보관
+            </p>
           </FadeIn>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
@@ -92,12 +91,11 @@ export default function InfernapeSection() {
 
               <FadeIn direction="up" delay={0.34}>
                 <button
-                  onClick={() => open('올인원 대시보드')}
+                  onClick={openBookmarkReleases}
                   className="w-full py-3.5 rounded-full font-bold text-base bg-pikachu text-[#0a0a14] hover:scale-105 hover:shadow-[0_0_32px_rgba(255,222,0,0.55)] transition-all"
-                >⬇️ 최신 버전 다운로드</button>
+                >⬇️ GitHub에서 설치 파일 받기</button>
                 <p className="text-orange-200 text-sm text-center mt-2">
-                  {dashboardVer ? `v${dashboardVer}` : '최신'} · Windows
-                  {DASHBOARD_MAC_PUBLIC_PATH ? ' / macOS' : ''} · 무료
+                  Windows 10 / 11 (64비트) · 무료 · 오프라인 사용
                 </p>
               </FadeIn>
             </div>
@@ -116,21 +114,30 @@ export default function InfernapeSection() {
                     sparkleBorder
                     imgStyle={{ borderRadius: 12 }}
                   />
-                  {/* 라이브 프리뷰 카드 */}
+                  {/* 책갈피 미리보기 카드 */}
                   <div
                     className="absolute -right-6 bottom-10 w-44 p-3 rounded-xl"
                     style={{ background:'rgba(15,15,28,0.92)', border:'1px solid rgba(255,222,0,0.3)', boxShadow:'0 8px 24px rgba(0,0,0,0.4)' }}
                   >
                     <div className="flex items-center gap-2 mb-3">
                       <div className="animate-updot w-2 h-2 rounded-full bg-green-500" />
-                      <span style={{ color:'var(--pikachu)', fontSize:10, fontFamily:'"Courier New",monospace' }}>LIVE</span>
+                      <span style={{ color:'var(--pikachu)', fontSize:10, fontFamily:'"Courier New",monospace' }}>READY</span>
                     </div>
-                    <div className="space-y-1.5">
-                      {[85, 65, 92, 50].map((w, i) => (
-                        <div key={i} className="h-1.5 rounded-full" style={{ background:`rgba(255,222,0,${0.2+i*0.1})`, width:`${w}%` }} />
+                    <div className="flex justify-end gap-1 mb-2">
+                      {BOOKMARK_TAB_COLORS.map((color) => (
+                        <div
+                          key={color}
+                          className="rounded-sm"
+                          style={{ width: 8, height: 28, background: color, opacity: 0.9 }}
+                        />
                       ))}
                     </div>
-                    <p style={{ color:'rgba(255,255,255,0.4)', fontSize:9, marginTop:8, fontFamily:'"Noto Sans KR",sans-serif' }}>대시보드 미리보기</p>
+                    <div className="space-y-1.5 pl-1">
+                      <div className="h-1 rounded-full" style={{ background:'rgba(255,255,255,0.25)', width:'88%' }} />
+                      <div className="h-1 rounded-full" style={{ background:'rgba(255,255,255,0.15)', width:'72%' }} />
+                      <div className="h-1 rounded-full" style={{ background:'rgba(255,255,255,0.1)', width:'56%' }} />
+                    </div>
+                    <p style={{ color:'rgba(255,255,255,0.4)', fontSize:9, marginTop:8, fontFamily:'"Noto Sans KR",sans-serif' }}>Bookmark · 가장자리 메모</p>
                   </div>
                 </div>
               </FadeIn>

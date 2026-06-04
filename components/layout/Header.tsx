@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import MobileDrawer from './MobileDrawer'
-import { LINK_MACHINE_LEARNING } from '@/constants/links'
+import { LINK_BOOKMARK, LINK_MACHINE_LEARNING, LINK_POKEPANDAS, LINK_JUDGE } from '@/constants/links'
 
 const NAV_ITEMS = [
   {
@@ -23,10 +23,10 @@ const NAV_ITEMS = [
     cols: 3,
   },
   {
-    label: '🔥 올인원 대시보드',
+    label: '🔥 가장 편한 메모앱',
     links: [
-      { href: '#infernape-section', icon: '⬇️', title: '설치 파일 다운로드', desc: '최신 버전 다운로드' },
-      { href: '#infernape-section', icon: '⚙️', title: '설정 공유',          desc: '추천 설정 파일 공유' },
+      { href: LINK_BOOKMARK, icon: '⬇️', title: '설치 파일 다운로드', desc: '최신 버전 다운로드' },
+      { href: '#infernape-section', icon: '📖', title: '앱 소개',          desc: 'Bookmark 메모 앱 안내' },
       { href: '#contact-section',   icon: '🐛', title: '버그 제보',          desc: '오류 신고 및 개선 요청' },
     ],
     cols: 3,
@@ -35,7 +35,7 @@ const NAV_ITEMS = [
     label: '🐼 Pandas',
     links: [
       { href: '#pandas-section', icon: '🐼', title: 'PokéPandas 소개', desc: 'Pandas 시각화 학습 · 섹션으로 이동' },
-      { href: 'https://df-one-sigma.vercel.app/', icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 PokéPandas 열기' },
+      { href: LINK_POKEPANDAS, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 PokéPandas 열기' },
     ],
     cols: 2,
   },
@@ -43,7 +43,7 @@ const NAV_ITEMS = [
     label: '⚖️ 판사시스템',
     links: [
       { href: '#aipom-section', icon: '⚖️', title: '판사시스템 소개', desc: 'AI 법정 섹션으로 이동' },
-      { href: 'https://judge-chi.vercel.app/', icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 AI 법정 열기' },
+      { href: LINK_JUDGE, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 AI 법정 열기' },
     ],
     cols: 2,
   },

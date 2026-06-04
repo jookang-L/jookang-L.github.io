@@ -1,9 +1,16 @@
 /** 외부 서비스 URL (한곳에서 관리) */
 export const LINK_GIBO = 'https://sub-record.vercel.app/'
+
+/** Bookmark 메모앱 — jookang-L/bookmark 설치 (GitHub Releases) */
+export const LINK_BOOKMARK = 'https://github.com/jookang-L/bookmark/releases'
+
+/** PokéPandas — jookang-L/df (Pandas 시각화 학습) */
 export const LINK_POKEPANDAS = 'https://df-one-sigma.vercel.app/'
+
 /** AI 법정 — 교육용 모의 판사 시스템 */
 export const LINK_JUDGE = 'https://judge-chi.vercel.app/'
-/** 기계학습 실습 웹사이트 — 고등학생을 위한 sklearn 실습 플랫폼 */
+
+/** Scikit-Learn Lab — jookang-L/class-sckit-learn (기계학습 실습) */
 export const LINK_MACHINE_LEARNING = 'https://class-sckit-learn.vercel.app/'
 
 /** JooK playground 피드백 (Google Sheets) */

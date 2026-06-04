@@ -39,7 +39,7 @@ const THEME: Record<string, Theme> = {
     tagBg:    'rgba(0,120,255,0.08)',
     tagColor: '#93c5fd',
   },
-  /* 올인원 대시보드 — 네비 🔥 초염몽(주황·불꽃) */
+  /* Bookmark 메모앱 — 네비 🔥 초염몽(주황·불꽃) */
   infernape: {
     glow:     'rgba(255,85,30,0.38)',
     border:   'rgba(255,110,45,0.5)',

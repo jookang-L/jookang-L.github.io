@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { LINK_MACHINE_LEARNING } from '@/constants/links'
+import { LINK_BOOKMARK, LINK_MACHINE_LEARNING, LINK_POKEPANDAS, LINK_JUDGE } from '@/constants/links'
 
 interface Props {
   open: boolean
@@ -12,9 +12,9 @@ interface Props {
 const DRAWER_LINKS = [
   { label: 'ABOUT',          links: [{ href: '#about-section', text: '🎮 주크의 놀이터 소개' }, { href: '#updates-section', text: '📢 업데이트 소식' }] },
   { label: '생활기록부',     links: [{ href: '#greninja-section', text: '📚 사용법 가이드' }, { href: '#greninja-section', text: '📊 데이터 분석 Q&A' }] },
-  { label: '올인원 대시보드', links: [{ href: '#infernape-section', text: '⬇️ 설치 파일 다운로드' }, { href: '#contact-section', text: '🐛 버그 제보' }] },
-  { label: 'Pandas',         links: [{ href: '#pandas-section', text: '🐼 PokéPandas 소개' }, { href: 'https://df-one-sigma.vercel.app/', text: '🚀 PokéPandas 열기' }] },
-  { label: '판사시스템',     links: [{ href: '#aipom-section', text: '⚖️ 판사시스템 소개' }, { href: 'https://judge-chi.vercel.app/', text: '🚀 판사시스템 열기' }] },
+  { label: '가장 편한 메모앱', links: [{ href: LINK_BOOKMARK, text: '⬇️ 설치 파일 다운로드' }, { href: '#infernape-section', text: '📖 앱 소개' }, { href: '#contact-section', text: '🐛 버그 제보' }] },
+  { label: 'Pandas',         links: [{ href: '#pandas-section', text: '🐼 PokéPandas 소개' }, { href: LINK_POKEPANDAS, text: '🚀 PokéPandas 열기' }] },
+  { label: '판사시스템',     links: [{ href: '#aipom-section', text: '⚖️ 판사시스템 소개' }, { href: LINK_JUDGE, text: '🚀 판사시스템 열기' }] },
   { label: '기계학습',       links: [{ href: '#eevee-section', text: '🦊 기계학습 실습 소개' }, { href: LINK_MACHINE_LEARNING, text: '🚀 실습 웹사이트 열기' }] },
   { label: 'CONTACT',        links: [{ href: '#contact-section', text: '💬 1:1 질문하기' }, { href: '#faq-section', text: '❓ FAQ' }] },
 ]

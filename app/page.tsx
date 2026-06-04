@@ -35,7 +35,7 @@ export default function Page() {
         {/* S3 : 생활기록부 분석 — 개굴닌자 */}
         <GreninjaSection />
 
-        {/* S4 : 올인원 대시보드 — 초염몽 */}
+        {/* S4 : Bookmark 메모앱 — 초염몽 */}
         <InfernapeSection />
 
         {/* S5 : PokéPandas — 나무킹 테마 */}

@@ -51,7 +51,7 @@ export default function PandasSection() {
         </FadeIn>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
-          {/* 생기부·대시보드와 동일 (기본 320px) */}
+          {/* 생기부·Bookmark 섹션과 동일 (기본 320px) */}
           <FadeIn direction="right" className="flex justify-center">
             <div className="relative p-4">
               <span

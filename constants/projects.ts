@@ -1,9 +1,4 @@
-import { LINK_GIBO, LINK_POKEPANDAS, LINK_JUDGE, LINK_MACHINE_LEARNING } from '@/constants/links'
-import { DASHBOARD_SETUP_VERSION } from '@/constants/dashboard-download.generated'
-
-const dashboardVer =
-  (typeof process !== 'undefined' && process.env.NEXT_PUBLIC_DASHBOARD_SETUP_VERSION) ||
-  DASHBOARD_SETUP_VERSION
+import { LINK_GIBO, LINK_BOOKMARK, LINK_POKEPANDAS, LINK_JUDGE, LINK_MACHINE_LEARNING } from '@/constants/links'
 
 export type PokemonType = 'pikachu' | 'greninja' | 'infernape' | 'pokepandas' | 'aipom' | 'eevee'
 export type ProjectStatus = 'live' | 'beta' | 'soon'
@@ -44,20 +39,17 @@ export const PROJECTS: Project[] = [
     tags: ['생기부', '웹', 'NEIS'],
   },
   {
-    id: 'all-in-one-dashboard',
-    name: '올인원 대시보드',
-    description: '파일함 · 캘린더 · 급식 정보를 하나의 화면에',
+    id: 'bookmark-memo',
+    name: '가장 편한 메모앱',
+    description: '화면 오른쪽 가장자리에 붙는 책갈피형 메모',
     longDesc:
-      '나이스(NEIS) API 연동 급식 정보, 학사 일정 캘린더, 수업 자료 파일함을 하나의 대시보드로 통합합니다.',
-    icon: '📊',
+      '클릭 한 번으로 메모를 열고 자동 저장되며, 인터넷 없이 PC에만 데이터가 저장되는 Windows용 Bookmark입니다.',
+    icon: '🔖',
     pokemon: 'infernape',
     status: 'live',
-    badge: dashboardVer ? `v${dashboardVer}` : 'Desktop',
-    downloadUrl: {
-      windows: '',
-      mac: '',
-    },
-    tags: ['대시보드', '캘린더', '급식'],
+    badge: 'Desktop',
+    externalUrl: LINK_BOOKMARK,
+    tags: ['메모', 'Windows', '오프라인'],
   },
   {
     id: 'pandas-simulator',

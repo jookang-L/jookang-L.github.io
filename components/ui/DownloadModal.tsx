@@ -9,7 +9,7 @@ import {
   DASHBOARD_MAC_FILENAME,
 } from '@/constants/dashboard-download.generated'
 
-const DASHBOARD_APP_NAME = '올인원 대시보드'
+const DASHBOARD_APP_NAME = '가장 편한 메모앱'
 
 /** GitHub 100MB 제한으로 public에 exe를 못 올릴 때 — Releases 등 전체 URL */
 const WIN_URL =

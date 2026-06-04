@@ -3,42 +3,34 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import PokemonImage from '@/components/ui/PokemonImage'
-import { LINK_POKEPANDAS, LINK_JUDGE, LINK_MACHINE_LEARNING } from '@/constants/links'
 import { useGiboLink } from '@/components/guards/GiboLinkProvider'
-import { useModal } from '@/app/providers'
+import HeroToolGroups from '@/components/home/HeroToolGroups'
 
-const CODE_LINES = `import pandas as pd
-import numpy as np
-from ai_model import StudentAnalyzer
-
-class SchoolDashboard:
-    def __init__(self, school_code):
-        self.meal_api  = MealAPI(school_code)
-        self.calendar  = SchoolCalendar()
-        self.analyzer  = StudentAnalyzer()
-
-    def get_today_meal(self):
-        return self.meal_api.fetch(date="today")
+const CODE_LINES = `from bookmark import EdgeMemo
 
 # 생활기록부 분석
 def analyze_student_record(pdf_path):
     data    = extract_text(pdf_path)
     summary = ai_summarize(data)
-    draft   = ai_generate_draft(summary)
-    return draft
+    return ai_generate_draft(summary)
 
-# 교사용 대시보드 v1.0.0
+# Bookmark — 가장 편한 메모앱
+class TeacherMemo(EdgeMemo):
+    def __init__(self):
+        super().__init__()
+        self.auto_save = True
+        self.offline   = True
+
+    def pin_to_edge(self, note):
+        self.save(note)
+        return self.show_panel()  # 🔥
+
 if __name__ == '__main__':
-    board = SchoolDashboard("B100000000")
-    board.run()  # 🔥 열정을 코드로`
-
-function openExternal(url: string) {
-  window.open(url, '_blank', 'noopener,noreferrer')
-}
+    memo = TeacherMemo()
+    memo.pin_to_edge("오늘 수업 메모")`
 
 export default function Hero() {
   const { openGibo } = useGiboLink()
-  const { open: openDownloadModal } = useModal()
   const heroRef = useRef<HTMLElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -66,7 +58,7 @@ export default function Hero() {
 
       {/* ── IDE 배경 ── */}
       <motion.div
-        className="absolute inset-0"
+        className="absolute inset-0 pointer-events-none"
         style={{ background: 'var(--dark-ide)', opacity: ideOp }}
       >
         {/* IDE 탭 바 */}
@@ -83,7 +75,7 @@ export default function Hero() {
             main.py ×
           </div>
           <div style={{ background: 'rgba(255,255,255,0.04)', color: 'rgba(255,255,255,0.4)', padding: '4px 14px', borderRadius: '6px 6px 0 0' }}>
-            dashboard.js
+            bookmark.ts
           </div>
         </div>
         {/* 코드 레인 */}
@@ -122,69 +114,31 @@ export default function Hero() {
       </div>
 
       {/* ── 히어로 텍스트 ── */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center z-10">
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center z-20 pointer-events-none gap-6">
 
-        {/* 칠판 버전 */}
-        <motion.div style={{ opacity: chalkOp }}>
+        {/* 칠판 타이틀 */}
+        <motion.div className="pointer-events-none" style={{ opacity: chalkOp }}>
           <p
             className="chalk-font text-white/60 text-base md:text-lg mb-3"
             style={{ letterSpacing: '0.25em' }}
           >✏️ 교사를 위한 디지털 도구</p>
           <h1
-            className="chalk-font text-white/93 mb-5 leading-tight"
-            style={{ fontSize: 'clamp(40px,9vw,96px)' }}
+            className="chalk-font text-white/93 leading-tight whitespace-nowrap"
+            style={{ fontSize: 'clamp(32px,7vw,88px)' }}
           >
-            주크(JooK)의<br />놀이터
+            주크(JooK)의 놀이터
           </h1>
-          <p className="text-white/75 text-base md:text-xl mb-10">
-            선생님의 업무를 조금 더 가볍게 만들어드릴게요
-          </p>
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 max-w-3xl mx-auto">
-            <button
-              type="button"
-              onClick={() => void openGibo()}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-greninja text-white hover:scale-105 hover:shadow-[0_0_32px_rgba(0,140,255,0.5)] transition-all"
-            >📊 생활기록부 분석</button>
-            <button
-              type="button"
-              onClick={() => openDownloadModal('올인원 대시보드')}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-infernape text-white hover:scale-105 hover:shadow-[0_0_32px_rgba(255,100,40,0.55)] transition-all"
-            >🔥 올인원 대시보드</button>
-            <button
-              type="button"
-              onClick={() => openExternal(LINK_POKEPANDAS)}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-[#2f8f5f] text-[#f0fdf4] hover:scale-105 hover:shadow-[0_0_28px_rgba(47,143,95,0.55)] transition-all"
-            >🐼 pokepandas</button>
-            <button
-              type="button"
-              onClick={() => openExternal(LINK_JUDGE)}
-              className="px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:shadow-[0_0_28px_rgba(165,122,196,0.55)] transition-all"
-              style={{
-                background: 'linear-gradient(135deg, #9d73c4 0%, #7d529f 48%, #6b4588 100%)',
-                color: '#fffbf5',
-              }}
-            >⚖️ 판사시스템</button>
-            <button
-              type="button"
-              onClick={() => openExternal(LINK_MACHINE_LEARNING)}
-              className="px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:shadow-[0_0_28px_rgba(190,135,72,0.55)] transition-all"
-              style={{
-                background: 'linear-gradient(135deg, #d7a15f 0%, #9b6534 48%, #5b341d 100%)',
-                color: '#fff7ed',
-              }}
-            >🦊 기계학습 실습</button>
-          </div>
         </motion.div>
 
-        {/* IDE 버전 */}
+        {/* 도구 링크 — 한 번만 렌더 (중복 클릭 방지) */}
+        <HeroToolGroups openGibo={openGibo} />
+
+        {/* IDE 코드 패널 (스크롤 시) */}
         <motion.div
+          className="pointer-events-none absolute left-1/2 -translate-x-1/2 w-[90%] max-w-[560px]"
           style={{
             opacity: ideOp,
-            position: 'absolute',
-            top: '50%', left: '50%',
-            transform: 'translate(-50%,-50%)',
-            width: '90%', maxWidth: 560,
-            pointerEvents: 'none',
+            top: 'calc(50% - 120px)',
           }}
         >
           <div
@@ -206,41 +160,6 @@ export default function Hero() {
               (<span style={{ color: '#ce9178' }}>&quot;선생님&quot;</span>)
               <span className="animate-blink" style={{ color: 'var(--pikachu)', fontSize: 16 }}>█</span>
             </p>
-          </div>
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 mt-8 max-w-3xl mx-auto" style={{ pointerEvents: 'auto' }}>
-            <button
-              type="button"
-              onClick={() => void openGibo()}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-greninja text-white hover:scale-105 hover:shadow-[0_0_32px_rgba(0,140,255,0.5)] transition-all"
-            >📊 생활기록부 분석</button>
-            <button
-              type="button"
-              onClick={() => openDownloadModal('올인원 대시보드')}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-infernape text-white hover:scale-105 hover:shadow-[0_0_32px_rgba(255,100,40,0.55)] transition-all"
-            >🔥 올인원 대시보드</button>
-            <button
-              type="button"
-              onClick={() => openExternal(LINK_POKEPANDAS)}
-              className="px-7 py-3.5 rounded-full font-bold text-base bg-[#2f8f5f] text-[#f0fdf4] hover:scale-105 hover:shadow-[0_0_28px_rgba(47,143,95,0.55)] transition-all"
-            >🐼 pokepandas</button>
-            <button
-              type="button"
-              onClick={() => openExternal(LINK_JUDGE)}
-              className="px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:shadow-[0_0_28px_rgba(165,122,196,0.55)] transition-all"
-              style={{
-                background: 'linear-gradient(135deg, #9d73c4 0%, #7d529f 48%, #6b4588 100%)',
-                color: '#fffbf5',
-              }}
-            >⚖️ 판사시스템</button>
-            <button
-              type="button"
-              onClick={() => openExternal(LINK_MACHINE_LEARNING)}
-              className="px-7 py-3.5 rounded-full font-bold text-base hover:scale-105 hover:shadow-[0_0_28px_rgba(190,135,72,0.55)] transition-all"
-              style={{
-                background: 'linear-gradient(135deg, #d7a15f 0%, #9b6534 48%, #5b341d 100%)',
-                color: '#fff7ed',
-              }}
-            >🦊 기계학습 실습</button>
           </div>
         </motion.div>
       </div>

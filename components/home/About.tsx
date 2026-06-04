@@ -10,7 +10,7 @@ const PROFILE_ITEMS = [
 const BADGES = [
   { style: { background:'rgba(255,222,0,0.1)', color:'var(--pikachu)' }, text: '⚡ 피카츄 — 아이디어' },
   { style: { background:'rgba(0,86,191,0.15)',  color:'#60a5fa'        }, text: '💧 개굴닌자 — 분석' },
-  { style: { background:'rgba(255,69,0,0.15)',  color:'#fb923c'        }, text: '🔥 초염몽 — 열정' },
+  { style: { background:'rgba(255,69,0,0.15)',  color:'#fb923c'        }, text: '🔥 초염몽 — Bookmark' },
   { style: { background:'rgba(30,95,65,0.35)',  color:'#a3e4c0'        }, text: '🍃 나무킹 — 끈기' },
 ]
 
