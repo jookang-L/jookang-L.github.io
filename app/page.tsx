@@ -8,6 +8,7 @@ import InfernapeSection  from '@/components/home/InfernapeSection'
 import PandasSection     from '@/components/home/PandasSection'
 import AipomSection      from '@/components/home/AipomSection'
 import EeveeSection      from '@/components/home/EeveeSection'
+import ElectrodeSection  from '@/components/home/ElectrodeSection'
 import ProjectHub    from '@/components/cards/ProjectHub'
 import About         from '@/components/home/About'
 import Updates       from '@/components/home/Updates'
@@ -47,11 +48,14 @@ export default function Page() {
         {/* S7 : 기계학습 실습 웹사이트 — 이브이 테마 */}
         <EeveeSection />
 
-        {/* S8 : ABOUT & 업데이트 */}
+        {/* S8 : 코드아케이드 — 일렉트로드 테마 */}
+        <ElectrodeSection />
+
+        {/* S9 : ABOUT & 업데이트 */}
         <About />
         <Updates />
 
-        {/* S9 : Contact & FAQ */}
+        {/* S10 : Contact & FAQ */}
         <Contact />
       </main>
 

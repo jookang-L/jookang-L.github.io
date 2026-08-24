@@ -84,6 +84,7 @@ body {
 .pokemon-wrap.sceptile:hover  .pokemon-img { transform: scale(1.08) translateY(-6px); filter: drop-shadow(0 0 18px rgba(120,230,190,0.95)) drop-shadow(0 0 48px rgba(50,180,130,0.45)); }
 .pokemon-wrap.aipom:hover     .pokemon-img { transform: scale(1.08) translateY(-6px); filter: drop-shadow(0 0 18px rgba(200,160,235,0.95)) drop-shadow(0 0 48px rgba(140,90,180,0.48)); }
 .pokemon-wrap.eevee:hover     .pokemon-img { transform: scale(1.08) translateY(-6px); filter: drop-shadow(0 0 18px rgba(245,200,140,0.95)) drop-shadow(0 0 48px rgba(170,105,55,0.5)); }
+.pokemon-wrap.electrode:hover .pokemon-img { transform: scale(1.08) translateY(-6px); filter: drop-shadow(0 0 18px rgba(210,220,235,0.95)) drop-shadow(0 0 48px rgba(150,80,110,0.5)); }
 
 /* 흰 단색 배경(JFIF/PNG): img에 filter 쓰면 mix-blend가 깨져 흰 네모로 보임 → 그림자는 래퍼(.pokemon-wrap--knockout)만 */
 .pokemon-wrap--knockout {
@@ -147,6 +148,7 @@ body {
 .pokemon-wrap.sceptile::after  { background: radial-gradient(ellipse, rgba(80,200,140,0.28) 0%, transparent 70%); }
 .pokemon-wrap.aipom::after     { background: radial-gradient(ellipse, rgba(180,130,220,0.32) 0%, transparent 70%); }
 .pokemon-wrap.eevee::after     { background: radial-gradient(ellipse, rgba(210,150,90,0.32) 0%, transparent 70%); }
+.pokemon-wrap.electrode::after { background: radial-gradient(ellipse, rgba(180,110,140,0.32) 0%, transparent 70%); }
 .pokemon-wrap:hover::after     { width: 90%; height: 24px; bottom: -14px; }
 
 /* 호버 시 테두리 반짝임 (::after는 그림자 링용이므로 반짝 레이어는 ::before) */
@@ -196,6 +198,10 @@ body {
 /* 이브이 — 크림 브라운 테두리 */
 .pokemon-wrap.pokemon-sparkle.eevee:hover::before {
   border-color: rgba(255, 225, 185, 0.94);
+}
+/* 일렉트로드 — 실버 로즈 테두리 */
+.pokemon-wrap.pokemon-sparkle.electrode:hover::before {
+  border-color: rgba(220, 190, 205, 0.94);
 }
 
 /* ─── 공통 유틸리티 ─── */

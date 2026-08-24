@@ -83,6 +83,17 @@ const THEME: Record<string, Theme> = {
     tagBg:    'rgba(190, 135, 72, 0.18)',
     tagColor: '#fed7aa',
   },
+  /* 코드아케이드 — 일렉트로드(실버 스틸 · 로즈 악센트) */
+  electrode: {
+    glow:     'rgba(180, 90, 120, 0.4)',
+    border:   'rgba(200, 160, 180, 0.42)',
+    accent:   '#c9748f',
+    btn:      'linear-gradient(135deg, #b98098 0%, #8a4a63 42%, #5c2f42 100%)',
+    btnText:  '#fdf6f8',
+    iconBg:   'rgba(150, 90, 115, 0.28)',
+    tagBg:    'rgba(180, 90, 120, 0.18)',
+    tagColor: '#f0c9d6',
+  },
 }
 
 interface Props {

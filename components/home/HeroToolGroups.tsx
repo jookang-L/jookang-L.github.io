@@ -5,6 +5,7 @@ import {
   LINK_POKEPANDAS,
   LINK_JUDGE,
   LINK_MACHINE_LEARNING,
+  LINK_CODEARCADE,
 } from '@/constants/links'
 
 const BTN =
@@ -85,6 +86,18 @@ export default function HeroToolGroups({ openGibo }: Props) {
             }}
           >
             ⚖️ 판사시스템
+          </a>
+          <a
+            href={LINK_CODEARCADE}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${BTN} hover:scale-105 hover:shadow-[0_0_24px_rgba(180,90,120,0.55)]`}
+            style={{
+              background: 'linear-gradient(135deg, #b98098 0%, #8a4a63 48%, #5c2f42 100%)',
+              color: '#fdf6f8',
+            }}
+          >
+            🕹️ pygame
           </a>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { LINK_BOOKMARK, LINK_MACHINE_LEARNING, LINK_POKEPANDAS, LINK_JUDGE } from '@/constants/links'
+import { LINK_BOOKMARK, LINK_MACHINE_LEARNING, LINK_POKEPANDAS, LINK_JUDGE, LINK_CODEARCADE } from '@/constants/links'
 
 interface Props {
   open: boolean
@@ -16,6 +16,7 @@ const DRAWER_LINKS = [
   { label: 'Pandas',         links: [{ href: '#pandas-section', text: '🐼 PokéPandas 소개' }, { href: LINK_POKEPANDAS, text: '🚀 PokéPandas 열기' }] },
   { label: '판사시스템',     links: [{ href: '#aipom-section', text: '⚖️ 판사시스템 소개' }, { href: LINK_JUDGE, text: '🚀 판사시스템 열기' }] },
   { label: '기계학습',       links: [{ href: '#eevee-section', text: '🦊 기계학습 실습 소개' }, { href: LINK_MACHINE_LEARNING, text: '🚀 실습 웹사이트 열기' }] },
+  { label: 'pygame',         links: [{ href: '#electrode-section', text: '⚡ pygame 소개' }, { href: LINK_CODEARCADE, text: '🚀 pygame 열기' }] },
   { label: 'CONTACT',        links: [{ href: '#contact-section', text: '💬 1:1 질문하기' }, { href: '#faq-section', text: '❓ FAQ' }] },
 ]
 

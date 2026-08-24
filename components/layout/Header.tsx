@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import MobileDrawer from './MobileDrawer'
-import { LINK_BOOKMARK, LINK_MACHINE_LEARNING, LINK_POKEPANDAS, LINK_JUDGE } from '@/constants/links'
+import { LINK_BOOKMARK, LINK_MACHINE_LEARNING, LINK_POKEPANDAS, LINK_JUDGE, LINK_CODEARCADE } from '@/constants/links'
 
 const NAV_ITEMS = [
   {
@@ -52,6 +52,14 @@ const NAV_ITEMS = [
     links: [
       { href: '#eevee-section', icon: '🧠', title: '기계학습 실습 소개', desc: 'sklearn 실습 플랫폼 섹션으로 이동' },
       { href: LINK_MACHINE_LEARNING, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 기계학습 실습 열기' },
+    ],
+    cols: 2,
+  },
+  {
+    label: '⚡ pygame',
+    links: [
+      { href: '#electrode-section', icon: '🕹️', title: 'pygame 소개', desc: '수업 대시보드 섹션으로 이동' },
+      { href: LINK_CODEARCADE, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 pygame 열기' },
     ],
     cols: 2,
   },

@@ -16,6 +16,7 @@ const FOOTER_LINKS = [
       { label: '가장 편한 메모앱', href: LINK_BOOKMARK },
       { label: '판사시스템',      href: '#aipom-section' },
       { label: '기계학습 실습',   href: LINK_MACHINE_LEARNING },
+      { label: 'pygame',          href: '#electrode-section' },
     ],
   },
   {

@@ -1,6 +1,6 @@
-import { LINK_GIBO, LINK_BOOKMARK, LINK_POKEPANDAS, LINK_JUDGE, LINK_MACHINE_LEARNING } from '@/constants/links'
+import { LINK_GIBO, LINK_BOOKMARK, LINK_POKEPANDAS, LINK_JUDGE, LINK_MACHINE_LEARNING, LINK_CODEARCADE } from '@/constants/links'
 
-export type PokemonType = 'pikachu' | 'greninja' | 'infernape' | 'pokepandas' | 'aipom' | 'eevee'
+export type PokemonType = 'pikachu' | 'greninja' | 'infernape' | 'pokepandas' | 'aipom' | 'eevee' | 'electrode'
 export type ProjectStatus = 'live' | 'beta' | 'soon'
 
 export interface Project {
@@ -89,6 +89,20 @@ export const PROJECTS: Project[] = [
     badge: 'Web',
     externalUrl: LINK_MACHINE_LEARNING,
     tags: ['기계학습', 'sklearn', '실습'],
+  },
+  {
+    id: 'codearcade',
+    name: 'pygame',
+    description: '고교 프로그래밍 수업용 Pygame 대시보드',
+    longDesc:
+      '학번과 이름으로 로그인해 주차별 수업 자료를 내려받고, 과제를 제출하고, 직접 만든 Pygame 프로젝트를 전시하는 학급 전용 웹 서비스입니다.',
+    icon: '🕹️',
+    pokemon: 'electrode',
+    status: 'live',
+    badge: 'Web',
+    isNew: true,
+    externalUrl: LINK_CODEARCADE,
+    tags: ['수업 대시보드', 'Pygame', '과제 제출'],
   },
 ]
 
