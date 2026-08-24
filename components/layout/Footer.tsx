@@ -1,5 +1,3 @@
-import { LINK_BOOKMARK, LINK_POKEPANDAS, LINK_MACHINE_LEARNING } from '@/constants/links'
-
 const FOOTER_LINKS = [
   {
     title: 'ABOUT',
@@ -9,14 +7,19 @@ const FOOTER_LINKS = [
     ],
   },
   {
-    title: '도구',
+    title: '교사용',
     links: [
       { label: '생활기록부 분석', href: '#greninja-section' },
-      { label: 'PokéPandas',      href: LINK_POKEPANDAS },
-      { label: '가장 편한 메모앱', href: LINK_BOOKMARK },
-      { label: '판사시스템',      href: '#aipom-section' },
-      { label: '기계학습 실습',   href: LINK_MACHINE_LEARNING },
-      { label: 'pygame',          href: '#electrode-section' },
+      { label: '가장 편한 메모앱', href: '#infernape-section' },
+    ],
+  },
+  {
+    title: '학생용',
+    links: [
+      { label: '기계학습 실습', href: '#eevee-section' },
+      { label: 'pokepandas',    href: '#pandas-section' },
+      { label: 'pygame',        href: '#electrode-section' },
+      { label: '판사시스템',    href: '#aipom-section' },
     ],
   },
   {

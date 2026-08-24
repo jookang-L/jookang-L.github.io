@@ -54,7 +54,7 @@ export default function HeroToolGroups({ openGibo }: Props) {
           </a>
         </div>
 
-        <div className="flex flex-nowrap items-center justify-center gap-2 sm:gap-2.5 px-3 py-4 sm:px-4 sm:py-5 min-h-[52px]">
+        <div className="tool-scroll flex flex-nowrap items-center justify-start sm:justify-center gap-2 sm:gap-2.5 px-3 py-4 sm:px-4 sm:py-5 min-h-[52px] overflow-x-auto">
           <a
             href={LINK_MACHINE_LEARNING}
             target="_blank"
@@ -76,18 +76,6 @@ export default function HeroToolGroups({ openGibo }: Props) {
             🐼 pokepandas
           </a>
           <a
-            href={LINK_JUDGE}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${BTN} hover:scale-105 hover:shadow-[0_0_24px_rgba(165,122,196,0.55)]`}
-            style={{
-              background: 'linear-gradient(135deg, #9d73c4 0%, #7d529f 48%, #6b4588 100%)',
-              color: '#fffbf5',
-            }}
-          >
-            ⚖️ 판사시스템
-          </a>
-          <a
             href={LINK_CODEARCADE}
             target="_blank"
             rel="noopener noreferrer"
@@ -98,6 +86,18 @@ export default function HeroToolGroups({ openGibo }: Props) {
             }}
           >
             🕹️ pygame
+          </a>
+          <a
+            href={LINK_JUDGE}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`${BTN} hover:scale-105 hover:shadow-[0_0_24px_rgba(165,122,196,0.55)]`}
+            style={{
+              background: 'linear-gradient(135deg, #9d73c4 0%, #7d529f 48%, #6b4588 100%)',
+              color: '#fffbf5',
+            }}
+          >
+            ⚖️ 판사시스템
           </a>
         </div>
       </div>

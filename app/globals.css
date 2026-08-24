@@ -31,6 +31,15 @@ body {
 ::-webkit-scrollbar-track { background: #0a0a14; }
 ::-webkit-scrollbar-thumb { background: var(--pikachu); border-radius: 3px; }
 
+/* ─── Hero 도구 버튼 가로 스크롤 (칩이 넘칠 때 잘리지 않고 스와이프) ─── */
+.tool-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 222, 0, 0.5) transparent;
+}
+.tool-scroll::-webkit-scrollbar { height: 4px; width: auto; }
+.tool-scroll::-webkit-scrollbar-track { background: transparent; }
+.tool-scroll::-webkit-scrollbar-thumb { background: rgba(255, 222, 0, 0.5); border-radius: 3px; }
+
 /* ─── 몬스터볼 (로더) — 회전은 @keyframes 필수 (Tailwind 유틸 미사용 시에도 동작) */
 @keyframes pb-spin {
   from { transform: rotate(0deg); }

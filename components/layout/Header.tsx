@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import MobileDrawer from './MobileDrawer'
-import { LINK_BOOKMARK, LINK_MACHINE_LEARNING, LINK_POKEPANDAS, LINK_JUDGE, LINK_CODEARCADE } from '@/constants/links'
 
 const NAV_ITEMS = [
   {
@@ -14,52 +13,20 @@ const NAV_ITEMS = [
     cols: 2,
   },
   {
-    label: '💧 생활기록부',
+    label: '💧 교사용',
     links: [
-      { href: '#greninja-section', icon: '📚', title: '생활기록부 분석 사용법', desc: '단계별 사용 가이드' },
-      { href: '#greninja-section', icon: '📊', title: '데이터 분석 Q&A',      desc: '자주 묻는 분석 관련 질문' },
-      { href: '#contact-section',  icon: '💡', title: '개선 제안',            desc: '기능 요청 및 피드백' },
-    ],
-    cols: 3,
-  },
-  {
-    label: '🔥 가장 편한 메모앱',
-    links: [
-      { href: LINK_BOOKMARK, icon: '⬇️', title: '설치 파일 다운로드', desc: '최신 버전 다운로드' },
-      { href: '#infernape-section', icon: '📖', title: '앱 소개',          desc: 'Bookmark 메모 앱 안내' },
-      { href: '#contact-section',   icon: '🐛', title: '버그 제보',          desc: '오류 신고 및 개선 요청' },
-    ],
-    cols: 3,
-  },
-  {
-    label: '🐼 Pandas',
-    links: [
-      { href: '#pandas-section', icon: '🐼', title: 'PokéPandas 소개', desc: 'Pandas 시각화 학습 · 섹션으로 이동' },
-      { href: LINK_POKEPANDAS, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 PokéPandas 열기' },
+      { href: '#greninja-section',  icon: '📊', title: '생활기록부 분석', desc: '웹에서 바로 분석하는 생활기록부 분석 도우미' },
+      { href: '#infernape-section', icon: '🔖', title: '가장 편한 메모앱', desc: '화면 오른쪽 가장자리에 붙는 책갈피형 메모' },
     ],
     cols: 2,
   },
   {
-    label: '⚖️ 판사시스템',
+    label: '⚡ 학생용',
     links: [
-      { href: '#aipom-section', icon: '⚖️', title: '판사시스템 소개', desc: 'AI 법정 섹션으로 이동' },
-      { href: LINK_JUDGE, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 AI 법정 열기' },
-    ],
-    cols: 2,
-  },
-  {
-    label: '🦊 기계학습',
-    links: [
-      { href: '#eevee-section', icon: '🧠', title: '기계학습 실습 소개', desc: 'sklearn 실습 플랫폼 섹션으로 이동' },
-      { href: LINK_MACHINE_LEARNING, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 기계학습 실습 열기' },
-    ],
-    cols: 2,
-  },
-  {
-    label: '⚡ pygame',
-    links: [
-      { href: '#electrode-section', icon: '🕹️', title: 'pygame 소개', desc: '수업 대시보드 섹션으로 이동' },
-      { href: LINK_CODEARCADE, icon: '🚀', title: '웹에서 바로 실행', desc: '새 탭에서 pygame 열기' },
+      { href: '#eevee-section',    icon: '🧠', title: '기계학습 실습',  desc: 'sklearn으로 배우는 고등학생용 기계학습 실습 플랫폼' },
+      { href: '#pandas-section',   icon: '🐼', title: 'pokepandas',   desc: '포켓몬 데이터로 배우는 Pandas 시각화 학습' },
+      { href: '#electrode-section', icon: '🕹️', title: 'pygame',      desc: '고교 프로그래밍 수업용 Pygame 대시보드' },
+      { href: '#aipom-section',    icon: '⚖️', title: '판사시스템',   desc: '학생 참여형 AI 법정 · 사건 정리와 판례 탐색' },
     ],
     cols: 2,
   },
