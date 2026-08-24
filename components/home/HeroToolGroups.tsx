@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useRef, useState } from 'react'
 import {
   LINK_BOOKMARK,
   LINK_POKEPANDAS,
@@ -11,11 +12,52 @@ import {
 const BTN =
   'inline-flex shrink-0 items-center justify-center px-4 py-2.5 rounded-full font-bold text-xs sm:text-sm md:text-base transition-all whitespace-nowrap no-underline'
 
+/** "학생을 위한" 줄에서 스크롤 없이 바로 보일 버튼 개수 — 나머지는 가로 스크롤해야 나옴 */
+const STUDENT_VISIBLE_COUNT = 3
+
 interface Props {
   openGibo: () => void | Promise<void>
 }
 
 export default function HeroToolGroups({ openGibo }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null)
+  const [visibleWidth, setVisibleWidth] = useState<number | undefined>(undefined)
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+
+    const mq = window.matchMedia('(min-width: 640px)')
+
+    function measure() {
+      if (!el || !mq.matches) {
+        setVisibleWidth(undefined)
+        return
+      }
+      const items = Array.from(el.children) as HTMLElement[]
+      const lastVisible = items[STUDENT_VISIBLE_COUNT - 1]
+      if (!lastVisible) return
+      const elRect = el.getBoundingClientRect()
+      const lastRect = lastVisible.getBoundingClientRect()
+      // 버튼 사이 gap의 절반만 여백으로 더해서, 다음(숨겨야 할) 버튼이 살짝이라도 비치지 않게 함
+      const gapPx = parseFloat(getComputedStyle(el).columnGap) || 0
+      setVisibleWidth(lastRect.right - elRect.left + gapPx / 2)
+    }
+
+    measure()
+    // 폰트 스왑·줌 등으로 버튼 실제 크기가 바뀔 때마다 다시 측정 (고정 px로는 정확히 3개만 보이게 맞출 수 없음)
+    const ro = new ResizeObserver(measure)
+    Array.from(el.children).forEach((child) => ro.observe(child))
+    window.addEventListener('resize', measure)
+    mq.addEventListener('change', measure)
+
+    return () => {
+      ro.disconnect()
+      window.removeEventListener('resize', measure)
+      mq.removeEventListener('change', measure)
+    }
+  }, [])
+
   return (
     <div
       className="relative z-30 w-full max-w-4xl mx-auto pointer-events-auto rounded-2xl overflow-hidden text-left"
@@ -54,7 +96,11 @@ export default function HeroToolGroups({ openGibo }: Props) {
           </a>
         </div>
 
-        <div className="tool-scroll flex flex-nowrap items-center justify-start sm:justify-center gap-2 sm:gap-2.5 px-3 py-4 sm:px-4 sm:py-5 min-h-[52px] overflow-x-auto">
+        <div
+          ref={scrollRef}
+          className="tool-scroll flex flex-nowrap items-center justify-start gap-2 sm:gap-2.5 px-3 py-4 sm:px-4 sm:py-5 min-h-[52px] sm:mx-auto overflow-x-auto"
+          style={visibleWidth ? { maxWidth: visibleWidth } : undefined}
+        >
           <a
             href={LINK_MACHINE_LEARNING}
             target="_blank"
