@@ -96,9 +96,12 @@ export default function Footer() {
         </div>
 
         <div
-          className="mt-8 pt-6 w-full flex justify-center"
+          className="mt-8 pt-6 w-full flex flex-col items-center gap-2"
           style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
+          <a href="/legal/privacy" className="text-gray-400 hover:text-pikachu text-sm transition-colors">
+            개인정보 처리방침
+          </a>
           <p className="text-gray-500 text-sm text-center">
             © 2026 JooK&apos;s Playground. All rights reserved.
           </p>
